@@ -1,0 +1,47 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "En page"
+  },
+
+  "Navigation": {
+    "link-jobs": "jobs",
+    "link-candidates": "candidates",
+    "link-employers": "employers",
+    "link-about": "about",
+    "link-pricing": "pricing",
+    "link-contact": "contact"
+  },
+  "Header": {
+    "link-our-work": "Projects",
+    "link-process": "Process",
+    "link-blog": "Blog",
+    "link-contact-us": "Contact",
+    "contact-button": "Contact Us",
+    "language-label": "Select language",
+    "language-button": "Language",
+    "language-option-bs": "Bosnian",
+    "language-option-en": "English",
+    "language-option-de": "German"
+  },
+  "Footer": {
+    "for-candidates": { "title": "For Candidates" },
+    "for-employers": { "title": "For Employers" },
+    "about-us": { "title": "About Us" },
+    "navigation": {
+      "jobs": "Jobs",
+      "employers": "Employers",
+      "bookmarks": "Bookmarks",
+      "candidate-dashboard": "Candidate Dashboard",
+      "candidates": "Candidates",
+      "pricing": "Pricing",
+      "employer-dashboard": "Employer Dashboard",
+      "submit-job": "Submit Job",
+      "about-us": "About Us",
+      "contact": "Contact Us",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "faq": "FAQ"
+    }
+  }
+}

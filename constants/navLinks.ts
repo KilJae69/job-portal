@@ -1,0 +1,10 @@
+const navLinks = [
+  { href: "/jobs", title: "Navigation.link-jobs" },
+  { href: "/candidates", title: "Navigation.link-candidates" },
+  { href: "/employers", title: "Navigation.link-employers" },
+  { href: "/about", title: "Navigation.link-about" },
+  { href: "/pricing", title: "Navigation.link-pricing" },
+  { href: "/contact", title: "Navigation.link-contact" },
+] as const;
+
+export default navLinks;

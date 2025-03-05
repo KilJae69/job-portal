@@ -1,0 +1,46 @@
+{
+    "HomePage": {
+      "title": "Hallo Wiss!",
+      "about": "German page"
+    },
+    "Navigation": {
+      "link-jobs": "stellenangebote",
+      "link-candidates": "kandidaten",
+      "link-employers": "arbeitgeber",
+      "link-about": "uber-uns",
+      "link-pricing": "preise",
+      "link-contact": "kontakt"
+    },
+    "Header": {
+    "link-our-work": "Projekte",
+    "link-process": "Prozess",
+    "link-blog": "Blog",
+    "link-contact-us": "Kontaktieren ",
+    "contact-button": "Kontaktieren ",
+    "language-label": "Sprache auswählen",
+    "language-button": "Sprache",
+    "language-option-bs": "Bosnisch",
+    "language-option-en": "Englisch",
+    "language-option-de": "Deutsch"
+  },
+  "Footer": {
+    "for-candidates": { "title": "Für Kandidaten" },
+    "for-employers": { "title": "Für Arbeitgeber" },
+    "about-us": { "title": "Über uns" },
+    "navigation": {
+      "jobs": "Jobs",
+      "employers": "Arbeitgeber",
+      "bookmarks": "Lesezeichen",
+      "candidate-dashboard": "Kandidaten-Dashboard",
+      "candidates": "Kandidaten",
+      "pricing": "Preise",
+      "employer-dashboard": "Arbeitgeber-Dashboard",
+      "submit-job": "Job einreichen",
+      "about-us": "Über uns",
+      "contact": "Kontakt",
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutz",
+      "faq": "FAQ"
+    }
+  }
+  }

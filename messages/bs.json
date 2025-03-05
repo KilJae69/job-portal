@@ -1,0 +1,46 @@
+{
+    "HomePage": {
+      "title": "Vozdra svite!",
+      "about": "Bs page"
+    },
+    "Navigation": {
+      "link-jobs": "poslovi",
+      "link-candidates": "kandidati",
+      "link-employers": "poslodavci",
+      "link-about": "o-nama",
+      "link-pricing": "cijene",
+      "link-contact": "kontakt"
+    },
+    "Header": {
+      "link-our-work": "Projekti",
+      "link-process": "Proces",
+      "link-blog": "Blog",
+      "link-contact-us": "Kontakt",
+      "contact-button": "Kontakt",
+      "language-label": "Izaberite jezik",
+      "language-button": "Jezik",
+      "language-option-bs": "Bosanski",
+      "language-option-en": "Engleski",
+      "language-option-de": "Njemački"
+    },
+    "Footer": {
+    "for-candidates": { "title": "Za kandidate" },
+    "for-employers": { "title": "Za poslodavce" },
+    "about-us": { "title": "O nama" },
+    "navigation": {
+      "jobs": "Poslovi",
+      "employers": "Poslodavci",
+      "bookmarks": "Zabilješke",
+      "candidate-dashboard": "Kandidat Dashboard",
+      "candidates": "Kandidati",
+      "pricing": "Cijene",
+      "employer-dashboard": "Dashboard poslodavca",
+      "submit-job": "Objavi posao",
+      "about-us": "O nama",
+      "contact": "Kontakt",
+      "terms": "Uslovi",
+      "privacy": "Privatnost",
+      "faq": "Često postavljena pitanja"
+    }
+  }
+  }
