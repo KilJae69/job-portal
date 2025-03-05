@@ -4,6 +4,7 @@ import { Container } from "../shared/Container";
 import JobSearchForm from "../forms/JobSearchForm";
 import Image from "next/image";
 import { FadeIn } from "../shared/FadeIn";
+import HeroBubbles from "../HeroBubbles";
 
 export default function HeroSection() {
   const numJobs = 19856;
@@ -40,43 +41,8 @@ export default function HeroSection() {
               className="object-contain object-top relative"
               fill
             />
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 800 800"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="100%" height="100%" fill="url(#gradient)" />
-
-              <path
-                d="M 400 200 Q 500 220, 600 250 T 700 400 T 600 550 T 400 600 T 200 550 T 100 400 T 200 250 T 400 200"
-                stroke="#D1D9E6"
-                strokeWidth="2"
-                fill="none"
-              />
-              <path
-                d="M 400 150 Q 550 180, 650 250 T 750 400 T 650 550 T 400 650 T 150 550 T 50 400 T 150 250 T 400 150"
-                stroke="#D1D9E6"
-                strokeWidth="1"
-                fill="none"
-              />
-              <path
-                d="M 400 100 Q 600 130, 700 250 T 800 400 T 700 550 T 400 700 T 100 550 T 0 400 T 100 250 T 400 100"
-                stroke="#E0E7F1"
-                strokeWidth="1"
-                fill="none"
-              />
-
-              <circle cx="500" cy="220" r="8" fill="#D1D9E6" />
-              <circle cx="650" cy="250" r="8" fill="#D1D9E6" />
-              <circle cx="720" cy="400" r="8" fill="#D1D9E6" />
-              <circle cx="600" cy="550" r="8" fill="#D1D9E6" />
-              <circle cx="400" cy="600" r="8" fill="#D1D9E6" />
-              <circle cx="250" cy="520" r="8" fill="#D1D9E6" />
-              <circle cx="100" cy="400" r="8" fill="#D1D9E6" />
-              <circle cx="200" cy="250" r="8" fill="#D1D9E6" />
-            </svg>
+             <HeroBubbles />
+           
           </FadeIn>
         </div>
       </Container>

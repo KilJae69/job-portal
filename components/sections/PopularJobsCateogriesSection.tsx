@@ -2,6 +2,7 @@ import { jobCategories } from "@/constants/jobCategories";
 import { Container } from "../shared/Container";
 // import { Link } from "@/i18n/routing";
 import SectionIntro from "../shared/SectionIntro";
+import { FadeIn } from "../shared/FadeIn";
 
 export default function PopularJobsCateogriesSection() {
   return (
@@ -12,7 +13,7 @@ export default function PopularJobsCateogriesSection() {
           paragraph="2020 jobs live - 293 added today."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <FadeIn className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {jobCategories.map(({ href, title, numPositions, icon: Icon }) => (
             <a
               key={title}
@@ -32,7 +33,7 @@ export default function PopularJobsCateogriesSection() {
               </div>
             </a>
           ))}
-        </div>
+        </FadeIn>
       </Container>
     </section>
   );

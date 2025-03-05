@@ -3,6 +3,7 @@ import { Container } from "../shared/Container";
 import SectionIntro from "../shared/SectionIntro";
 // import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { FadeIn } from "../shared/FadeIn";
 
 export default function FeaturedJobsSection() {
   return (
@@ -13,7 +14,7 @@ export default function FeaturedJobsSection() {
           paragraph="Know your worth and find the job that qualify your life."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <FadeIn className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {jobListings.map((job) => (
             <a
               key={job.href}
@@ -61,7 +62,7 @@ export default function FeaturedJobsSection() {
               </div>
             </a>
           ))}
-        </div>
+        </FadeIn>
       </Container>
     </section>
   );
