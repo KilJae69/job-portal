@@ -1,7 +1,7 @@
 import { jobListings } from "@/constants/jobsData";
 import { Container } from "../shared/Container";
 import SectionIntro from "../shared/SectionIntro";
-import { Link } from "@/i18n/routing";
+// import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 export default function FeaturedJobsSection() {
@@ -15,7 +15,7 @@ export default function FeaturedJobsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {jobListings.map((job) => (
-            <Link
+            <a
               key={job.href}
               href={job.href}
               className="flex items-center gap-4 border border-slate-200 p-5 rounded-lg  transition"
@@ -59,7 +59,7 @@ export default function FeaturedJobsSection() {
                   )}
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </Container>

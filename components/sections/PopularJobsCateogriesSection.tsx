@@ -1,6 +1,6 @@
 import { jobCategories } from "@/constants/jobCategories";
 import { Container } from "../shared/Container";
-import { Link } from "@/i18n/routing";
+// import { Link } from "@/i18n/routing";
 import SectionIntro from "../shared/SectionIntro";
 
 export default function PopularJobsCateogriesSection() {
@@ -14,7 +14,7 @@ export default function PopularJobsCateogriesSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {jobCategories.map(({ href, title, numPositions, icon: Icon }) => (
-            <Link
+            <a
               key={title}
               href={href}
               className="flex group hover:-translate-y-1 hover:shadow-md transition-all duration-500 items-center gap-4 border p-5 rounded-lg border-slate-200"
@@ -30,7 +30,7 @@ export default function PopularJobsCateogriesSection() {
                   {numPositions} open positions
                 </p>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </Container>
