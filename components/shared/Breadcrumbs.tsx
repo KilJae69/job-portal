@@ -8,7 +8,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Link, routing, usePathname } from "@/i18n/routing";
+import {  routing, usePathname } from "@/i18n/routing";
+
+// #REPLACE NEXT LINK WITH INTL LINK
+import Link from "next/link";
 
 
 export default function Breadcrumbs() {
@@ -54,3 +57,4 @@ console.log(pathname);
     </Breadcrumb>
   );
 }
+

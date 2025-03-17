@@ -26,7 +26,7 @@ export default function HeroSection() {
             <p className="lg:text-lg">
               Find Jobs, Employment & Career Opportunities
             </p>
-            <JobSearchForm />
+            <JobSearchForm isHomePage/>
             <p>
               <span className="font-semibold">Popular searches:</span> Designer,
               Developer, Web, IOS, PHP, Senior, Engineer

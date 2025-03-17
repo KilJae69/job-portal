@@ -1,6 +1,10 @@
+import PageIntro from "@/components/shared/PageIntro";
+
 export default function ContactPage() {
   return (
-    <div>page</div>
+    <>
+     <PageIntro title={"Contact Us"} />
+    </>
   );
   
 }
