@@ -1,0 +1,109 @@
+{
+    "HomePage": {
+      "title": "Vozdra svite!",
+      "about": "Bs page"
+    },
+    "Navigation": {
+      "link-jobs": "poslovi",
+      "link-candidates": "kandidati",
+      "link-employers": "poslodavci",
+      "link-about": "o-nama",
+      "link-pricing": "cijene",
+      "link-contact": "kontakt"
+    },
+    "Header": {
+      "link-our-work": "Projekti",
+      "link-process": "Proces",
+      "link-blog": "Blog",
+      "link-contact-us": "Kontakt",
+      "contact-button": "Kontakt",
+      "language-label": "Izaberite jezik",
+      "language-button": "Jezik",
+      "language-option-bs": "Bosanski",
+      "language-option-en": "Engleski",
+      "language-option-de": "Njemački"
+    },
+    "Footer": {
+    "for-candidates": { "title": "Za kandidate" },
+    "for-employers": { "title": "Za poslodavce" },
+    "about-us": { "title": "O nama" },
+    "navigation": {
+      "jobs": "Poslovi",
+      "employers": "Poslodavci",
+      "bookmarks": "Zabilješke",
+      "candidate-dashboard": "Kandidat Dashboard",
+      "candidates": "Kandidati",
+      "pricing": "Cijene",
+      "employer-dashboard": "Dashboard poslodavca",
+      "submit-job": "Objavi posao",
+      "about-us": "O nama",
+      "contact": "Kontakt",
+      "terms": "Uslovi",
+      "privacy": "Privatnost",
+      "faq": "Često postavljena pitanja"
+    }
+  },
+  "FAQ": {
+    "category-payments": "Plaćanja",
+    "category-suggestions": "Prijedlozi",
+
+    "question-payment-failure": "Zašto moja uplata ne prolazi?",
+    "answer-payment-failure": "Vaša uplata može biti odbijena zbog nedovoljno sredstava, netačnih podataka ili sigurnosnih razloga. Provjerite sa svojom bankom.",
+
+    "question-refund": "Kako mogu dobiti povrat novca?",
+    "answer-refund": "Zahtjev za povrat novca možete podnijeti našem timu za podršku u roku od 14 dana od kupovine.",
+
+    "question-coupon": "Kako mogu iskoristiti kupon?",
+    "answer-coupon": "Unesite kod kupona prilikom plaćanja. Ako je ispravan, popust će biti primijenjen.",
+
+    "question-account-name": "Promjena imena računa",
+    "answer-account-name": "Za promjenu imena računa idite na Postavke > Profil i ažurirajte ime.",
+
+    "question-feature-request": "Kako mogu predložiti novu funkciju?",
+    "answer-feature-request": "Prijedloge za nove funkcije možete poslati putem naše stranice za podršku.",
+
+    "question-vote-suggestions": "Mogu li glasati za postojeće prijedloge?",
+    "answer-vote-suggestions": "Da, možete glasati za prijedloge kako biste im dali prioritet.",
+
+    "question-contact-support": "Kako mogu kontaktirati podršku?",
+    "answer-contact-support": "Podršku možete kontaktirati putem e-maila ili live chata na našoj stranici pomoći.",
+
+    "question-latest-updates": "Gdje mogu pronaći najnovija ažuriranja?",
+    "answer-latest-updates": "Najnovija ažuriranja možete pronaći na našem blogu i u bilješkama o verzijama."
+  },
+  "Terms": {
+    "page-title": "Uslovi korištenja",
+    "section-terms": "1. Uslovi",
+    "content-terms": "Pristupom ovoj web stranici slažete se da ćete se pridržavati ovih uslova korištenja, svih važećih zakona i propisa, te da ste odgovorni za poštivanje bilo kojih važećih lokalnih zakona.",
+
+    "section-limitations": "2. Ograničenja",
+    "content-limitations": "Ni u kojem slučaju web stranica ili njeni dobavljači neće biti odgovorni za bilo kakvu štetu nastalu korištenjem ili nemogućnošću korištenja materijala na web stranici.",
+
+    "section-revisions": "3. Revizije i ispravke",
+    "content-revisions": "Materijali na web stranici mogu sadržavati tehničke, tipografske ili fotografske greške. Web stranica ne garantuje da su materijali tačni, potpuni ili aktuelni.",
+
+    "section-modifications": "4. Izmjene uslova korištenja",
+    "content-modifications": "Web stranica može u bilo kojem trenutku izmijeniti ove uslove korištenja bez prethodne obavijesti. Korištenjem ove web stranice slažete se da ste vezani trenutnom verzijom ovih uslova usluge."
+  },
+  "Privacy": {
+    "page-title": "Politika privatnosti",
+
+    "section-introduction": "1. Uvod",
+    "content-introduction": "Poštujemo vašu privatnost i posvećeni smo zaštiti ličnih podataka koje nam možete pružiti putem web stranice.",
+
+    "section-information": "2. Informacije koje prikupljamo",
+    "content-information": "Prikupljamo samo potrebne informacije za pružanje naših usluga, kao što su vaše ime, e-mail i kontakt podaci prilikom registracije na našoj web stranici.",
+
+    "section-use": "3. Kako koristimo vaše podatke",
+    "content-use": "Prikupljene informacije koristimo isključivo za pružanje i poboljšanje naših usluga. Ne prodajemo, ne razmjenjujemo i ne iznajmljujemo vaše lične podatke trećim stranama.",
+
+    "section-data-protection": "4. Zaštita podataka",
+    "content-data-protection": "Primjenjujemo sigurnosne mjere kako bismo zaštitili vaše lične podatke. Međutim, nijedna metoda prijenosa putem Interneta nije 100% sigurna.",
+
+    "section-changes": "5. Promjene u politici privatnosti",
+    "content-changes": "Možemo povremeno ažurirati našu politiku privatnosti. Sve promjene će biti objavljene na ovoj stranici."
+  },
+  "Pricing": {
+    "page-title": "Cijene"
+  }
+  }

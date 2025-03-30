@@ -1,0 +1,109 @@
+{
+    "HomePage": {
+      "title": "Hallo Wiss!",
+      "about": "German page"
+    },
+    "Navigation": {
+      "link-jobs": "stellenangebote",
+      "link-candidates": "kandidaten",
+      "link-employers": "arbeitgeber",
+      "link-about": "uber-uns",
+      "link-pricing": "preise",
+      "link-contact": "kontakt"
+    },
+    "Header": {
+    "link-our-work": "Projekte",
+    "link-process": "Prozess",
+    "link-blog": "Blog",
+    "link-contact-us": "Kontaktieren ",
+    "contact-button": "Kontaktieren ",
+    "language-label": "Sprache auswählen",
+    "language-button": "Sprache",
+    "language-option-bs": "Bosnisch",
+    "language-option-en": "Englisch",
+    "language-option-de": "Deutsch"
+  },
+  "Footer": {
+    "for-candidates": { "title": "Für Kandidaten" },
+    "for-employers": { "title": "Für Arbeitgeber" },
+    "about-us": { "title": "Über uns" },
+    "navigation": {
+      "jobs": "Jobs",
+      "employers": "Arbeitgeber",
+      "bookmarks": "Lesezeichen",
+      "candidate-dashboard": "Kandidaten-Dashboard",
+      "candidates": "Kandidaten",
+      "pricing": "Preise",
+      "employer-dashboard": "Arbeitgeber-Dashboard",
+      "submit-job": "Job einreichen",
+      "about-us": "Über uns",
+      "contact": "Kontakt",
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutz",
+      "faq": "FAQ"
+    }
+  },
+  "FAQ": {
+    "category-payments": "Zahlungen",
+    "category-suggestions": "Vorschläge",
+
+    "question-payment-failure": "Warum wird meine Zahlung nicht durchgeführt?",
+    "answer-payment-failure": "Ihre Zahlung könnte aufgrund unzureichender Mittel, falscher Details oder Sicherheitsgründe abgelehnt worden sein. Bitte kontaktieren Sie Ihre Bank.",
+
+    "question-refund": "Wie erhalte ich eine Rückerstattung?",
+    "answer-refund": "Um eine Rückerstattung zu beantragen, kontaktieren Sie bitte unser Support-Team innerhalb von 14 Tagen nach dem Kauf.",
+
+    "question-coupon": "Wie löse ich einen Gutschein ein?",
+    "answer-coupon": "Geben Sie Ihren Gutscheincode an der Kasse ein. Wenn er gültig ist, wird der Rabatt angewendet.",
+
+    "question-account-name": "Kontonamen ändern",
+    "answer-account-name": "Um Ihren Kontonamen zu ändern, gehen Sie zu Einstellungen > Profil und aktualisieren Sie Ihren Namen.",
+
+    "question-feature-request": "Wie kann ich eine neue Funktion vorschlagen?",
+    "answer-feature-request": "Sie können Funktionsvorschläge über unsere Support-Seite einreichen.",
+
+    "question-vote-suggestions": "Kann ich für bestehende Vorschläge abstimmen?",
+    "answer-vote-suggestions": "Ja, Sie können Vorschläge bewerten, um deren Priorität zu erhöhen.",
+
+    "question-contact-support": "Wie kann ich den Support kontaktieren?",
+    "answer-contact-support": "Sie können den Support per E-Mail oder Live-Chat über unser Hilfe-Center erreichen.",
+
+    "question-latest-updates": "Wo finde ich die neuesten Updates?",
+    "answer-latest-updates": "Die neuesten Updates finden Sie auf unserem Blog und in den Versionshinweisen."
+  },
+  "Terms": {
+    "page-title": "Nutzungsbedingungen",
+    "section-terms": "1. Bedingungen",
+    "content-terms": "Durch den Zugriff auf diese Website erklären Sie sich damit einverstanden, an diese Nutzungsbedingungen, alle geltenden Gesetze und Vorschriften gebunden zu sein und erklären sich damit einverstanden, dass Sie für die Einhaltung aller geltenden lokalen Gesetze verantwortlich sind.",
+
+    "section-limitations": "2. Einschränkungen",
+    "content-limitations": "In keinem Fall haften die Website oder ihre Lieferanten für Schäden, die durch die Nutzung oder Unmöglichkeit der Nutzung der Materialien auf der Website entstehen.",
+
+    "section-revisions": "3. Überarbeitungen und Fehler",
+    "content-revisions": "Die auf der Website erscheinenden Materialien können technische, typografische oder fotografische Fehler enthalten. Die Website übernimmt keine Gewähr dafür, dass die Materialien korrekt, vollständig oder aktuell sind.",
+
+    "section-modifications": "4. Änderungen der Nutzungsbedingungen",
+    "content-modifications": "Die Website kann diese Nutzungsbedingungen jederzeit ohne vorherige Ankündigung überarbeiten. Durch die Nutzung dieser Website erklären Sie sich damit einverstanden, an die aktuelle Version dieser Nutzungsbedingungen gebunden zu sein."
+  },
+  "Privacy": {
+    "page-title": "Datenschutzrichtlinie",
+
+    "section-introduction": "1. Einführung",
+    "content-introduction": "Wir respektieren Ihre Privatsphäre und sind bestrebt, personenbezogene Daten zu schützen, die Sie uns über die Website zur Verfügung stellen können.",
+
+    "section-information": "2. Welche Informationen wir sammeln",
+    "content-information": "Wir erfassen nur die notwendigen Informationen zur Bereitstellung unserer Dienste, wie Ihren Namen, Ihre E-Mail-Adresse und Kontaktdaten bei der Registrierung auf unserer Website.",
+
+    "section-use": "3. Wie wir Ihre Daten verwenden",
+    "content-use": "Die von uns gesammelten Informationen werden ausschließlich zur Bereitstellung und Verbesserung unserer Dienstleistungen verwendet. Wir verkaufen, handeln oder vermieten Ihre personenbezogenen Daten nicht an Dritte.",
+
+    "section-data-protection": "4. Datenschutz",
+    "content-data-protection": "Wir setzen Sicherheitsmaßnahmen ein, um die Sicherheit Ihrer persönlichen Daten zu gewährleisten. Allerdings ist keine Methode der Übertragung über das Internet zu 100 % sicher.",
+
+    "section-changes": "5. Änderungen an dieser Datenschutzrichtlinie",
+    "content-changes": "Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite veröffentlicht."
+  },
+  "Pricing": {
+    "page-title": "Preise"
+  }
+  }

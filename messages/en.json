@@ -1,0 +1,110 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "En page"
+  },
+
+  "Navigation": {
+    "link-jobs": "jobs",
+    "link-candidates": "candidates",
+    "link-employers": "employers",
+    "link-about": "about",
+    "link-pricing": "pricing",
+    "link-contact": "contact"
+  },
+  "Header": {
+    "link-our-work": "Projects",
+    "link-process": "Process",
+    "link-blog": "Blog",
+    "link-contact-us": "Contact",
+    "contact-button": "Contact Us",
+    "language-label": "Select language",
+    "language-button": "Language",
+    "language-option-bs": "Bosnian",
+    "language-option-en": "English",
+    "language-option-de": "German"
+  },
+  "Footer": {
+    "for-candidates": { "title": "For Candidates" },
+    "for-employers": { "title": "For Employers" },
+    "about-us": { "title": "About Us" },
+    "navigation": {
+      "jobs": "Jobs",
+      "employers": "Employers",
+      "bookmarks": "Bookmarks",
+      "candidate-dashboard": "Candidate Dashboard",
+      "candidates": "Candidates",
+      "pricing": "Pricing",
+      "employer-dashboard": "Employer Dashboard",
+      "submit-job": "Submit Job",
+      "about-us": "About Us",
+      "contact": "Contact Us",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "faq": "FAQ"
+    }
+  },
+  "FAQ": {
+    "category-payments": "Payments",
+    "category-suggestions": "Suggestions",
+
+    "question-payment-failure": "Why won’t my payment go through?",
+    "answer-payment-failure": "Your payment may be declined due to insufficient funds, incorrect details, or security reasons. Please check with your bank.",
+
+    "question-refund": "How do I get a refund?",
+    "answer-refund": "To request a refund, please contact our support team within 14 days of your purchase.",
+
+    "question-coupon": "How do I redeem a coupon?",
+    "answer-coupon": "Enter your coupon code at checkout. If it is valid, the discount will be applied.",
+
+    "question-account-name": "Changing account name",
+    "answer-account-name": "To change your account name, go to Settings > Profile and update your name.",
+
+    "question-feature-request": "How do I suggest a new feature?",
+    "answer-feature-request": "You can submit feature requests via our support page.",
+
+    "question-vote-suggestions": "Can I vote on existing suggestions?",
+    "answer-vote-suggestions": "Yes, you can upvote suggestions to prioritize them for development.",
+
+    "question-contact-support": "How do I contact support?",
+    "answer-contact-support": "You can reach support via email or live chat from our help center.",
+
+    "question-latest-updates": "Where can I find the latest updates?",
+    "answer-latest-updates": "Check our blog and release notes for the latest product updates."
+  },
+  "Terms": {
+    "page-title": "Terms & Conditions",
+    "section-terms": "1. Terms",
+    "content-terms": "By accessing this website, you agree to be bound by these terms of service, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws.",
+    
+    "section-limitations": "2. Limitations",
+    "content-limitations": "In no event shall the website or its suppliers be liable for any damages arising from the use or inability to use the materials on the website.",
+
+    "section-revisions": "3. Revisions and Errata",
+    "content-revisions": "The materials appearing on the website could include technical, typographical, or photographic errors. The website does not warrant that any of the materials are accurate, complete, or current.",
+
+    "section-modifications": "4. Site Terms of Use Modifications",
+    "content-modifications": "The website may revise these terms of use at any time without notice. By using this website, you agree to be bound by the current version of these terms of service."
+  },
+  "Privacy": {
+    "page-title": "Privacy Policy",
+    
+    "section-introduction": "1. Introduction",
+    "content-introduction": "We respect your privacy and are committed to protecting personally identifiable information you may provide us through the website.",
+
+    "section-information": "2. Information We Collect",
+    "content-information": "We only collect necessary information to provide our services, such as your name, email, and contact details when you register on our website.",
+
+    "section-use": "3. How We Use Your Information",
+    "content-use": "The information we collect is used solely for providing and improving our services. We do not sell, trade, or rent your personal data to third parties.",
+
+    "section-data-protection": "4. Data Protection",
+    "content-data-protection": "We implement security measures to maintain the safety of your personal information. However, no method of transmission over the Internet is 100% secure.",
+
+    "section-changes": "5. Changes to This Privacy Policy",
+    "content-changes": "We may update our privacy policy from time to time. Any changes will be posted on this page."
+  },
+  "Pricing": {
+    "page-title": "Pricing"
+  }
+}

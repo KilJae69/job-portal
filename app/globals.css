@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  ----breakpoint-8xl: 1380px;
+
+  --animate-accordion-down: accordion-down 0.4s ease-out;
+  --animate-accordion-up: accordion-up 0.4s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      max-height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+}
+
