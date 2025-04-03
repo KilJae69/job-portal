@@ -27,26 +27,10 @@ const AuthEventComponent = () => {
             });
         });
 
-        // Add handler for token refresh events
-        const tokensRefreshedUnsub = eventBus.subscribe('auth:tokensRefreshed', (data) => {
-            // Log the successful token refresh
-            console.log('Auth tokens refreshed successfully');
 
-            // Optionally show a toast for debugging purposes
-            // In production, you might want to remove this to avoid interrupting users
-            if (process.env.NODE_ENV === 'development') {
-                toast.success(data.message || 'Your session was refreshed.', {
-                    duration: 3000,
-                    icon: '🔄',
-                });
-            }
-        });
-
-        // Cleanup subscriptions
         return () => {
             sessionExpiredUnsub();
             authErrorUnsub();
-            tokensRefreshedUnsub();
         };
     }, [router]);
 

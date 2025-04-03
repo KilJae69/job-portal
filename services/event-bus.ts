@@ -6,7 +6,6 @@ export type AuthEventData = {
 export type EventTypes = {
     'auth:sessionExpired': AuthEventData;
     'auth:error': AuthEventData;
-    'auth:tokensRefreshed': AuthEventData;
     [key: string]: any;
 };
 

@@ -1,3 +1,4 @@
+// context/auth-context.tsx
 import React, {
     useReducer,
     useContext,
@@ -15,8 +16,7 @@ import {
     Permissions,
     AuthContextProps,
 } from '@/types/auth-types';
-import { authService } from '@/services/auth-service';
-import {storageService} from "@/services/storage";
+import { storageService } from '@/services/storage';
 
 const initialState: AuthState = {
     showAlert: false,
@@ -79,23 +79,22 @@ const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
         }, 3000);
     };
 
-    const updateUserBasicInfo = async (value: Partial<User>) => {
-        if (!state.user) return;
+    const updateUserBasicInfo = async (userData: Partial<User>): Promise<User | null> => {
+        if (!state.user) return null;
 
         try {
-            // Update user through auth service
-            const updatedUser = await authService.updateUserInfo(value);
+            dispatch({
+                type: ActionTypes.UPDATE_USER_BASIC_INFO,
+                payload: { value: userData }
+            });
 
-            if (updatedUser) {
-                // Update user in state
-                dispatch({
-                    type: ActionTypes.UPDATE_USER_BASIC_INFO,
-                    payload: { value }
-                });
-            }
+            // Update user in storage
+            const updatedUser = await storageService.updateUser(userData);
+            return updatedUser;
         } catch (error) {
             console.error('Error updating user info:', error);
             displayAlert('error', 'Failed to update user information');
+            return null;
         }
     };
 
@@ -104,13 +103,11 @@ const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
         permissions: Permissions | null,
     ) => {
         try {
-            // Store auth data in storage
-            await Promise.all([
-                storageService.storeUser(user),
-                storageService.storePermissions(permissions),
-            ]);
+            await storageService.storeUser(user);
+            if (permissions) {
+                await storageService.storePermissions(permissions);
+            }
 
-            // Update state
             dispatch({
                 type: ActionTypes.LOGIN_USER_SUCCESS,
                 payload: { user, permissions },
@@ -122,13 +119,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
     };
 
     const logoutUser = async () => {
-        try {
-            await authService.logout();
-            dispatch({ type: ActionTypes.LOGOUT_USER });
-        } catch (error) {
-            console.error('Error during logout:', error);
-            dispatch({ type: ActionTypes.LOGOUT_USER });
-        }
+        dispatch({ type: ActionTypes.LOGOUT_USER });
     };
 
     return (
@@ -150,4 +141,4 @@ const useAuthContext = () => {
     return useContext(AuthContext);
 };
 
-export {AuthProvider, initialState, useAuthContext};
+export { AuthProvider, initialState, useAuthContext };

@@ -86,7 +86,6 @@ export type AuthAction =
     | DisplayAlertAction
     | ClearAlertAction
     | LoginUserSuccessAction
-    | RegenerateAccessTokenAction
     | LogoutUserAction
     | UpdateUserBasicInfoAction
     | SetStorageLoadingAction

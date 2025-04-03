@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthContext } from '@/context/auth-context';
 import axiosInstance from '@/services/axios-service';
+import {API_LANG, API_VERSION} from "@/config";
+import {useLogout} from "@/hooks/auth";
 
 
 export default function ProtectedResourcePage() {
@@ -11,31 +13,28 @@ export default function ProtectedResourcePage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    const { user, logoutUser, isStorageLoading } = useAuthContext();
+    const { user, isStorageLoading } = useAuthContext();
     const router = useRouter();
+
+    const {logout} = useLogout()
 
 
 
     // Fetch the protected resource
     useEffect(() => {
         const fetchProtectedResource = async () => {
-            const interceptor = axiosInstance.interceptors.request.use(config => {
-                console.log("Request headers -------------------------->:", config.headers);
-                return config;
-            });
             try {
                 setLoading(true);
                 // The language parameter will be filled from the API's default locale setting
-                const response = await axiosInstance.get('/protected-resource');
+                const response = await axiosInstance.get(`/api/${API_VERSION}/${API_LANG}/protected-resource`);
                 setData(response.data)
-                console.log("Response", response);
             } catch (err: any) {
                 console.error('Error fetching protected resource:', err);
 
                 if (err.response?.status === 401) {
                     setError('Your session has expired. Please log in again.');
                     // Handle token expiration - this should be automatic if your axios interceptors are set up correctly
-                    await logoutUser();
+                    await logout();
                     router.push('/login');
                 } else {
                     setError(err.response?.data?.message || 'Failed to fetch protected resource');
@@ -47,7 +46,7 @@ export default function ProtectedResourcePage() {
 
             fetchProtectedResource();
 
-    }, [user, isStorageLoading, router, logoutUser]);
+    }, [user, isStorageLoading, router]);
 
     // Show loading while checking auth
     if (isStorageLoading) {
@@ -59,9 +58,7 @@ export default function ProtectedResourcePage() {
     }
 
     // If no user and not loading, we'll redirect (see effect above)
-    if (!user) {
-        return null;
-    }
+
 
     return (
         <div className="min-h-screen bg-gray-100 p-6 mt-15">
@@ -70,7 +67,7 @@ export default function ProtectedResourcePage() {
                     <h1 className="text-2xl font-bold">Protected Resource</h1>
                     <button
                         onClick={async () => {
-                            await logoutUser();
+                            await logout();
                             router.push('/login');
                         }}
                         className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded"
@@ -100,12 +97,12 @@ export default function ProtectedResourcePage() {
                     </div>
                 ) : null}
 
-                <div className="mt-6 bg-blue-50 p-4 rounded-lg">
-                    <h2 className="text-lg font-semibold mb-2">User Information</h2>
-                    <p><strong>ID:</strong> {user.id}</p>
-                    <p><strong>Name:</strong> {user.name}</p>
-                    <p><strong>Email:</strong> {user.email}</p>
-                </div>
+                {/*<div className="mt-6 bg-blue-50 p-4 rounded-lg">*/}
+                {/*    <h2 className="text-lg font-semibold mb-2">User Information</h2>*/}
+                {/*    <p><strong>ID:</strong> {user.id}</p>*/}
+                {/*    <p><strong>Name:</strong> {user.name}</p>*/}
+                {/*    <p><strong>Email:</strong> {user.email}</p>*/}
+                {/*</div>*/}
 
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <h3 className="text-md font-medium mb-2">Request this endpoint:</h3>

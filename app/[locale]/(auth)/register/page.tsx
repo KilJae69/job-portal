@@ -2,20 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAuthContext } from '@/context/auth-context';
-import axiosInstance from '@/services/axios-service';
 import Link from 'next/link';
-
+import { useRegister } from '@/hooks/auth';
+import { useAuthContext } from '@/context/auth-context';
 
 export default function RegisterPage() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [password_confirmation, setPasswordConfirmation] = useState('');
-    const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
-    const [generalError, setGeneralError] = useState('');
 
+    const { register, isLoading, error } = useRegister();
     const router = useRouter();
     const { user } = useAuthContext();
 
@@ -31,37 +29,27 @@ export default function RegisterPage() {
 
         // Reset errors
         setErrors({});
-        setGeneralError('');
-        setLoading(true);
 
         try {
-            // Using the Laravel API endpoint from the controller
-            const response = await axiosInstance.post('/auth/register', {
+            const result = await register({
                 name,
                 email,
                 password,
-                password_confirmation // Laravel validation expects this field name
+                password_confirmation
             });
 
-            if (response.status === 201) {
+            if (result.success) {
                 // Registration successful, redirect to login with success message
                 router.push('/login?registered=true');
-            } else {
-                setGeneralError('Registration failed. Please try again.');
+            } else if (result.error) {
+                // Check if the error response contains validation errors
+                const errorObj = result.error as any;
+                if (errorObj.response?.data?.errors) {
+                    setErrors(errorObj.response.data.errors);
+                }
             }
-        } catch (err: any) {
-            console.error('Registration error:', err);
-
-            // Handle Laravel validation error format
-            if (err.response?.data?.errors) {
-                setErrors(err.response.data.errors);
-            } else if (err.response?.data?.message) {
-                setGeneralError(err.response.data.message);
-            } else {
-                setGeneralError('An error occurred during registration');
-            }
-        } finally {
-            setLoading(false);
+        } catch (err) {
+            console.error('Unexpected registration error:', err);
         }
     };
 
@@ -78,9 +66,22 @@ export default function RegisterPage() {
                     </p>
                 </div>
 
-                {errors && (
+                {error && (
                     <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                        <span className="block sm:inline">{generalError}</span>
+                        <span className="block sm:inline">{error}</span>
+                    </div>
+                )}
+
+                {/* Display validation errors if any */}
+                {Object.keys(errors).length > 0 && (
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <ul className="list-disc pl-5">
+                            {Object.entries(errors).map(([field, messages]) => (
+                                messages.map((message, index) => (
+                                    <li key={`${field}-${index}`}>{message}</li>
+                                ))
+                            ))}
+                        </ul>
                     </div>
                 )}
 
@@ -147,12 +148,12 @@ export default function RegisterPage() {
                     <div>
                         <button
                             type="submit"
-                            disabled={loading}
+                            disabled={isLoading}
                             className={`group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white ${
-                                loading ? 'bg-indigo-400' : 'bg-indigo-600 hover:bg-indigo-700'
+                                isLoading ? 'bg-indigo-400' : 'bg-indigo-600 hover:bg-indigo-700'
                             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
                         >
-                            {loading ? 'Creating account...' : 'Create account'}
+                            {isLoading ? 'Creating account...' : 'Create account'}
                         </button>
                     </div>
                 </form>

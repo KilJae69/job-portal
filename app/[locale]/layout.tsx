@@ -9,6 +9,7 @@ import "@/app/globals.css";
 
 import InnerLayout from "../../components/shared/InnerLayout";
 import {setupAuthService} from "@/services/auth-service";
+import {getCsrfToken} from "@/services/axios-service";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -38,7 +39,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
-
 
   return (
     <html
