@@ -9,6 +9,16 @@
 
   --animate-accordion-down: accordion-down 0.4s ease-out;
   --animate-accordion-up: accordion-up 0.4s ease-out;
+  --color-accent: oklch(0.546 0.245 262.881); /* Example Accent Color */
+
+  --text-h1: clamp(2rem, 1.2083rem + 3.9583vw, 4.375rem);
+  --text-h2: clamp(1.25rem, 0.7708rem + 2.3958vw, 2.6875rem);
+  --text-subtitle: clamp(0.75rem, 0.6667rem + 0.4167vw, 1rem);
+  --text-paragraph: clamp(
+    1rem,
+    2.5vw,
+    1.25rem
+  );
 
   @keyframes accordion-down {
     from {
@@ -31,5 +41,31 @@
       opacity: 0;
     }
   }
+
+  @keyframes pulse-opacity {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
 }
 
+
+.text-subtitle {
+  font-size: var(--text-subtitle);
+  @apply font-semibold tracking-widest text-accent;
+}
+.text-h1 {
+  font-size: var(--text-h1);
+  @apply font-bold text-black leading-[1.2];
+}
+.text-h2 {
+  font-size: var(--text-h2);
+  @apply font-bold text-black leading-[1.1];
+}
+
+.text-paragraph {
+  @apply text-gray-500 text-lg;
+}
+
+.pulse-bg {
+  animation: pulse-opacity 2s ease-in-out infinite;
+}
