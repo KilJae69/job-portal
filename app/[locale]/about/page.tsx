@@ -9,6 +9,7 @@ import { FadeIn, FadeInStagger } from "@/components/shared/FadeIn";
 import PageIntro from "@/components/shared/PageIntro";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 import TimelineItem from "@/components/TimelineItem";
+import { GridBackground } from "@/components/ui/grid-background";
 import negativeTrends from "@/constants/negativeTrendsData";
 import {
   CheckCircleIcon,
@@ -299,8 +300,9 @@ export default function AboutPage() {
       </section>
 
       <OurCommitment />
-      <section className="relative py-12 lg:py-24">
-        <Container >
+      <section className="relative py-12">
+        <GridBackground />
+        <Container className="relative z-10">
           <div className="relative px-6 pt-5 rounded-3xl  shadow-xl">
             <Image
               src="/bg-hero.jpg"
@@ -318,7 +320,12 @@ export default function AboutPage() {
                   explicabo at labore libero sit qui eius dolorem corporis
                   deserunt commodi esse?
                 </p>
-                <PrimaryButton className="w-fit self-center whitespace-nowrap" href="/contact">Contact Us Now</PrimaryButton>
+                <PrimaryButton
+                  className="w-fit self-center whitespace-nowrap"
+                  href="/contact"
+                >
+                  Contact Us Now
+                </PrimaryButton>
               </div>
               <div className="relative">
                 <Image
@@ -327,7 +334,7 @@ export default function AboutPage() {
                   width={500}
                   height={500}
                 />
-                <CtaBubbles/>
+                <CtaBubbles />
               </div>
             </div>
           </div>
