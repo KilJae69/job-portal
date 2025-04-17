@@ -9,7 +9,7 @@
 
   --animate-accordion-down: accordion-down 0.4s ease-out;
   --animate-accordion-up: accordion-up 0.4s ease-out;
-  --color-accent: oklch(0.546 0.245 262.881); /* Example Accent Color */
+  --color-accent: #2196f3; /* Example Accent Color */
 
   --text-h1: clamp(2rem, 1.2083rem + 3.9583vw, 4.375rem);
   --text-h2: clamp(1.25rem, 0.7708rem + 2.3958vw, 2.6875rem);

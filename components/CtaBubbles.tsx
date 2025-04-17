@@ -4,45 +4,52 @@ import { m } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
-import { MdOutlineQuestionMark } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneVolume, FaViber, FaWhatsapp } from "react-icons/fa6";
 
 // Define bubbles with positions and delays
-const employerPainPoints = [
+const contacts = [
   {
     id: 1,
-    icon: <MdOutlineQuestionMark className="text-blue-500 w-6 h-6" />,
-    text: "Where will I find workers?",
-    position: "top-0 right-0",
+    icon: <FaViber className="text-purple-500 w-6 h-6" />,
+    text: "Viber",
+    position: "top-40 left-0",
     delay: 0.2,
+    href:"viber://chat?number=+38763699111"
   },
   {
     id: 2,
-    icon: <MdOutlineQuestionMark className="text-orange-500 w-6 h-6" />,
-    text: "Do I need to close?",
-    position: "bottom-52 right-0",
+    icon: <FaWhatsapp className="text-orange-500 w-6 h-6" />,
+    text: "WhatsApp",
+    position: "top-5 right-0",
     delay: 0.4,
+    href:"https://wa.me/+38763699111"
   },
   {
     id: 3,
-    icon: <MdOutlineQuestionMark className="text-red-500 w-6 h-6" />,
-    text: "Permits take too long!",
-    position: "bottom-32 right-10",
+    icon: <FaPhoneVolume className="text-red-500 w-6 h-6" />,
+    text: "Phone",
+    position: "top-30 right-0",
     delay: 0.6,
+     href:"tel:+38763699111"
   },
   {
     id: 4,
-    icon: <MdOutlineQuestionMark className="text-green-500 w-6 h-6" />,
-    text: "Why won't locals apply?",
-    position: "top-20 left-0",
+    icon: <MdEmail className="text-green-500 w-6 h-6" />,
+    text: "Email",
+    position: "top-4 left-0",
     delay: 0.8,
+    href:"mailto:adi.toromanovic@outlook.com"
   },
 ];
 
-export default function AboutBubbles() {
+export default function CtaBubbles() {
   return (
-    <div className="  relative w-full h-[600px]">
-      {employerPainPoints.map((bubble) => (
-        <m.div
+    <div className="  absolute inset-0 size-full ">
+      {contacts.map((bubble) => (
+        <m.a
+        href={bubble.href}
+        target="_blank"
           key={bubble.id}
           className={cn(
             "absolute flex items-center gap-2 bg-white p-4 rounded-lg shadow-lg cursor-pointer",
@@ -63,7 +70,7 @@ export default function AboutBubbles() {
         >
           {bubble.icon}
           <span className="text-sm lg:text-lg font-medium">{bubble.text}</span>
-        </m.div>
+        </m.a>
       ))}
     </div>
   );

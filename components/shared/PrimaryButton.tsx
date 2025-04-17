@@ -12,7 +12,7 @@ interface PrimaryButtonProps {
 }
 
 export default function PrimaryButton({ href, children, variant = "solid", className }: PrimaryButtonProps) {
-  const baseStyles = "px-8 py-6 text-md font-medium rounded-md transition cursor-pointer";
+  const baseStyles = "px-8 py-6 text-md inline-block font-medium rounded-md transition cursor-pointer";
 
   const solidStyles = "bg-blue-600 text-white hover:opacity-90";
   const outlineStyles = "border border-blue-600 text-blue-600 bg-white hover:bg-blue-50";
@@ -25,6 +25,7 @@ export default function PrimaryButton({ href, children, variant = "solid", class
 
   if (href) {
     return (
+      
       <Link href={href} className={buttonClass}>
         {children}
       </Link>
