@@ -5,40 +5,42 @@ import { m } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 import { MdOutlineQuestionMark } from "react-icons/md";
+import { useTranslations } from "next-intl";
 
 // Define bubbles with positions and delays
 const employerPainPoints = [
   {
     id: 1,
+    key: "findWorkers",
     icon: <MdOutlineQuestionMark className="text-blue-500 w-6 h-6" />,
-    text: "Where will I find workers?",
     position: "top-0 right-0",
     delay: 0.2,
   },
   {
     id: 2,
+    key: "closeBusiness",
     icon: <MdOutlineQuestionMark className="text-orange-500 w-6 h-6" />,
-    text: "Do I need to close?",
     position: "bottom-52 right-0",
     delay: 0.4,
   },
   {
     id: 3,
+    key: "permitsSlow",
     icon: <MdOutlineQuestionMark className="text-red-500 w-6 h-6" />,
-    text: "Permits take too long!",
     position: "bottom-32 right-10",
     delay: 0.6,
   },
   {
     id: 4,
+    key: "localsApply",
     icon: <MdOutlineQuestionMark className="text-green-500 w-6 h-6" />,
-    text: "Why won't locals apply?",
     position: "top-20 left-0",
     delay: 0.8,
   },
 ];
 
-export default function AboutBubbles() {
+export default  function AboutBubbles() {
+  const t =  useTranslations("AboutPage");
   return (
     <div className="  relative w-full h-[600px]">
       {employerPainPoints.map((bubble) => (
@@ -62,7 +64,7 @@ export default function AboutBubbles() {
           }}
         >
           {bubble.icon}
-          <span className="text-sm lg:text-lg font-medium">{bubble.text}</span>
+          <span className="text-sm lg:text-lg font-medium"> {t(`employerPainPoints.${bubble.key}`)}</span>
         </m.div>
       ))}
     </div>

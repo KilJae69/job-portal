@@ -1,7 +1,169 @@
 {
+  "Metadata": {
+    "BlogNotFoundTitle": "Blog Post Not Found",
+    "BlogNotFoundDescription": "The blog post you are looking for does not exist.",
+    "ProjectNotFoundTitle": "Case Study Not Found",
+    "ProjectNotFoundDescription": "The case study you are looking for does not exist.",
+    "ogCTA1": "Get started",
+    "ogCTA2": "Learn more",
+    "ogPillBlog": "Blog",
+    "ogPillProject": "Project",
+    "titleHome": "Spark Studio | Web Development Agency",
+
+    "descriptionHome": "Welcome to Spark Studio, a leading web development agency combining cutting-edge design and technology to deliver bespoke solutions. Discover how we can bring your digital vision to life.",
+    "ogDescriptionHome": "Discover how we can bring your digital vision to life.",
+
+    "titleAbout": "Pilot Program | Addressing the Labor Shortage in BiH",
+    "descriptionAbout": "Learn about our pilot program co-creating a legal foreign-staffing solution for Bosnian employers. Join us to shape a compliance-first workforce platform.",
+    "ogDescriptionAbout": "Explore our pilot program for legal foreign-staffing in BiH and help co-create an effective workforce solution.",
+
+    "titleContact": "Spark Studio | Contact Us for Your Next Big Idea",
+    "descriptionContact": "Contact Spark Studio to discuss your project needs. Whether you’re planning a website, app, or branding strategy, our team is ready to collaborate with you to make it a success.",
+    "ogDescriptionContact": "Contact Spark Studio to discuss your project needs."
+  },
   "HomePage": {
     "title": "Hello world!",
     "about": "En page"
+  },
+  "AboutPage": {
+    "PageIntro": {
+      "title": "About Us"
+    },
+    "Section1":{
+      "badge":"Pilot: Workforce",
+      "heading":"Labor Shortage Crisis in Bosnia and Herzegovina (Pilot Test)",
+      "p1":"We’re piloting a program to address the critical labor shortage in BiH: despite a 30.2% unemployment rate, key roles in construction, agriculture and hospitality remain unfilled.",
+      "p2":"Each year over 50,000 working-age people leave BiH, and fewer locals choose physical jobs. Our pilot test will examine whether legal migration can stop project delays and financial losses."
+    },
+    "negativeTrends": {
+      "emigration": {
+        "description": "Leave BiH each year",
+        "detail": "Mostly working-age (BHAS, 2023)"
+      },
+      "unfinished": {
+        "description": "Projects left unfinished",
+        "detail": "Due to labor shortage (FIPA)"
+      },
+      "losses": {
+        "description": "Annual economic losses",
+        "detail": "For the BiH economy (World Bank)"
+      },
+      "vacancies": {
+        "description": "Vacant positions",
+        "detail": "In construction (Chamber)"
+      }
+    },
+    "employerPainPoints": {
+      "findWorkers": "Where will I find workers?",
+      "closeBusiness": "Do I need to close?",
+      "permitsSlow": "Permits take too long!",
+      "localsApply": "Why won't locals apply?"
+    },
+    "Section2": {
+      "badge": "Pilot: Solution",
+      "heading": "Why We’re Testing Legal Migration as a Solution",
+      "p1": "We’re currently piloting a legal migration model as an opportunity—not just a necessity. Inspired by Croatia’s success with workers from Asia, we want to validate in BiH:",
+      "list": {
+        "permits": {
+          "title": "Regulated Work Permits",
+          "description": "Fully legal employment with a fast 4–6 week process. EU countries like Poland and Hungary already have systems in place."
+        },
+        "costSavings": {
+          "title": "Cost Savings",
+          "description": "Average 35 % savings compared to local hiring (source: Eurostat for Croatia, 2023)."
+        },
+        "flexibleContracts": {
+          "title": "Flexible Contract Terms",
+          "description": "You decide contract length—seasonal (3–6 months) or long-term (1+ year). We plan to support both models."
+        }
+      },
+      "benchmark": "As a benchmark, Croatia issued over 200 000 permits in 2024—now we’re testing the same methodology in BiH’s pilot program."
+    },
+    "Section3": {
+      "badge": "Our Approach (Pilot)",
+      "heading": "How We Plan to Solve BiH’s Labor Shortage (Pilot)",
+      "p1": "In our pilot phase we’ll combine global resources with local expertise—your feedback shapes every step of the process.",
+      "cards": {
+        "directAgency": {
+          "title": "Direct Agency Network",
+          "description": "Exclusive partners in the Philippines, Nepal and India give you fast access to pre-vetted workers."
+        },
+        "legalSupport": {
+          "title": "Comprehensive Legal Support",
+          "description": "End-to-end handling of work permits and contracts, minimizing paperwork for employers."
+        },
+        "integrationProgram": {
+          "title": "Cultural Integration Program",
+          "description": "Pre-departure training on BiH culture and basic language skills to reduce onboarding friction."
+        }
+      }
+    },
+    "Section4": {
+      "badge": "Clear Phases (Pilot)",
+      "heading": "Pilot Process for Hiring Foreign Workers",
+      "p1": "During the pilot phase we’re testing each step so that—with your feedback—we can build a fast and secure hiring process.",
+      "timeline": {
+        "step1": {
+          "title": "Employer Application & Needs Assessment",
+          "description": "Pilot consultation: together we define your real needs and success criteria."
+        },
+        "step2": {
+          "title": "Candidate Selection & Matching",
+          "description": "Pilot selection: we choose and match candidates from our global pool with your review."
+        },
+        "step3": {
+          "title": "Legal Documents & Permits",
+          "description": "Pilot documentation: we prepare permits, visas and legal forms with minimal paperwork."
+        },
+        "step4": {
+          "title": "Pre-Departure Preparation",
+          "description": "Pilot training: we organize language and cultural orientation as needed before traveling to BiH."
+        },
+        "step5": {
+          "title": "Arrival & Onboarding",
+          "description": "Pilot onboarding: we coordinate arrival and gather your feedback for improvements."
+        }
+      }
+    },
+    "Section5": {
+      "badge": "Our Commitment (Pilot)",
+      "heading": "Exploring How to Prevent Economic Decline in BiH via Pilot Solutions",
+      "p1": "Pilot test: how rapid workforce solutions can help BiH today",
+      "cta": "Join Our Pilot Program",
+      "pillars": {
+        "economicStability": {
+          "title": "Economic Stability",
+          "description": "Every 100 workers placed = €5 M retained in BiH’s economy (World Bank model)"
+        },
+        "processInnovation": {
+          "title": "Process Innovation",
+          "description": "Streamlining BiH’s work permit system based on Croatia’s success"
+        },
+        "continuousImprovement": {
+          "title": "Continuous Improvement",
+          "description": "+30 % faster processing with each 50 contracts completed"
+        }
+      },
+      "timelineHeading": "Hypotheses for Pilot (2025–2027)",
+      "timeline": {
+        "step1": {
+          "title": "Become the #1 workforce partner in construction & agriculture"
+        },
+        "step2": {
+          "title": "Reduce permit times to EU averages (under 4 weeks)"
+        },
+        "step3": {
+          "title": "Expand to 10+ source countries with cultural training"
+        }
+      }
+    },
+    "Section6": {
+      "heading": "Ready to shape the future of your business?",
+      "p1": "Join our pilot program and help co-create a solution that will secure a stable workforce for BiH employers and entrepreneurs.",
+      "cta": "Contact Us Today"
+    }
+
+   
   },
 
   "Navigation": {
@@ -77,7 +239,7 @@
     "page-title": "Terms & Conditions",
     "section-terms": "1. Terms",
     "content-terms": "By accessing this website, you agree to be bound by these terms of service, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws.",
-    
+
     "section-limitations": "2. Limitations",
     "content-limitations": "In no event shall the website or its suppliers be liable for any damages arising from the use or inability to use the materials on the website.",
 
@@ -89,7 +251,7 @@
   },
   "Privacy": {
     "page-title": "Privacy Policy",
-    
+
     "section-introduction": "1. Introduction",
     "content-introduction": "We respect your privacy and are committed to protecting personally identifiable information you may provide us through the website.",
 

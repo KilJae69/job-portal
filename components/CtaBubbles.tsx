@@ -19,7 +19,7 @@ const contacts = [
   },
   {
     id: 2,
-    icon: <FaWhatsapp className="text-orange-500 w-6 h-6" />,
+    icon: <FaWhatsapp className="text-green-500 w-6 h-6" />,
     text: "WhatsApp",
     position: "top-5 right-0",
     delay: 0.4,
@@ -35,7 +35,7 @@ const contacts = [
   },
   {
     id: 4,
-    icon: <MdEmail className="text-green-500 w-6 h-6" />,
+    icon: <MdEmail className="text-orange-500 w-6 h-6" />,
     text: "Email",
     position: "top-4 left-0",
     delay: 0.8,

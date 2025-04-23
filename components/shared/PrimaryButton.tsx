@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button"; // Ensure ShadCN button is imported
+
 import Link from "next/link";
 import { cn } from "@/lib/utils"; // ShadCN utility for conditional classes
 
@@ -32,5 +32,5 @@ export default function PrimaryButton({ href, children, variant = "solid", class
     );
   }
 
-  return <Button className={buttonClass}>{children}</Button>;
+  return <button  className={buttonClass}>{children}</button>;
 }

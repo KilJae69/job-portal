@@ -1,30 +1,189 @@
 {
-    "HomePage": {
-      "title": "Vozdra svite!",
-      "about": "Bs page"
+  "Metadata": {
+    "BlogNotFoundTitle": "Objava na blogu nije pronađena",
+    "BlogNotFoundDescription": "Blog post koji tražite ne postoji.",
+    "ProjectNotFoundTitle": "Studija slučaja nije pronađena",
+    "ProjectNotFoundDescription": "Studija slučaja koju tražite ne postoji.",
+    "ogCTA1": "Započni",
+    "ogCTA2": "Saznaj više",
+    "ogPillBlog": "Blog",
+    "ogPillProject": "Projekt",
+    "titleHome": "Spark Studio |  Agencija za Web Razvoj",
+    "descriptionHome": "Dobrodošli u Spark Studio, vodeću agenciju za web razvoj koja spaja savremeni dizajn i tehnologiju za izradu prilagođenih rješenja. Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
+    "ogDescriptionHome": "Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
+
+    "titleAbout": "Pilot Program | Rješavanje Nedostatka Radne Snage u BiH",
+    "descriptionAbout": "Saznajte više o našem pilot programu za su-kreiranje legalnog modela zapošljavanja stranih radnika u BiH. Pridružite nam se i oblikujte budućnost radne snage.",
+    "ogDescriptionAbout": "Istražite naš pilot program za legalno zapošljavanje stranih radnika u BiH i sudjelujte u su-kreiranju učinkovitog rješenja.",
+
+    "titleContact": "Spark Studio | Kontaktirajte Nas za Vaše Sljedeće Ideje",
+    "descriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima. Bilo da planirate web stranicu, aplikaciju ili strategiju brendiranja, naš tim je spreman da radi s vama.",
+    "ogDescriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima."
+  },
+  "HomePage": {
+    "title": "Vozdra svite!",
+    "about": "Bs page"
+  },
+  "AboutPage": {
+    "PageIntro": {
+      "title": "O nama"
     },
-    "Navigation": {
-      "link-home": "početna",
-      "link-jobs": "poslovi",
-      "link-candidates": "kandidati",
-      "link-employers": "poslodavci",
-      "link-about": "o-nama",
-      "link-pricing": "cijene",
-      "link-contact": "kontakt"
+    "Section1": {
+      "badge": "Pilot: Radna Snaga",
+      "heading": "Kriza nedostatka radne snage u BiH (Pilot-test)",
+      "p1": "Istražujemo pilot-program za rješavanje kritičnog manjka radne snage u BiH: iako stopa nezaposlenosti iznosi 30.2%, ključne pozicije u građevinarstvu, poljoprivredi i ugostiteljstvu ostaju prazne.",
+      "p2": "Svake godine 50 000+ radno sposobnih ljudi napusti BiH, a sve manje lokalnih radnika bira fizičke poslove. Naš pilot-test želi provjeriti može li legalna migracija zaustaviti kašnjenja projekata i financijske gubitke."
     },
-    "Header": {
-      "link-our-work": "Projekti",
-      "link-process": "Proces",
-      "link-blog": "Blog",
-      "link-contact-us": "Kontakt",
-      "contact-button": "Kontakt",
-      "language-label": "Izaberite jezik",
-      "language-button": "Jezik",
-      "language-option-bs": "Bosanski",
-      "language-option-en": "Engleski",
-      "language-option-de": "Njemački"
+    "negativeTrends": {
+      "emigration": {
+        "description": "Godišnje napusti BiH",
+        "detail": "Većinom radno sposobni (BHAS, 2023)"
+      },
+      "unfinished": {
+        "description": "Nezavršenih projekata",
+        "detail": "Zbog nedostatka radnika (FIPA)"
+      },
+      "losses": {
+        "description": "Gubici godišnje",
+        "detail": "Za privredu BiH (Svjetska Banka)"
+      },
+      "vacancies": {
+        "description": "Praznih radnih mjesta",
+        "detail": "U građevinarstvu (Komora)"
+      }
     },
-    "Footer": {
+    "employerPainPoints": {
+      "findWorkers": "Gdje ću pronaći radnike?",
+      "closeBusiness": "Hoću li morati zatvoriti firmu?",
+      "permitsSlow": "Postupak dobivanja dozvola traje predugo!",
+      "localsApply": "Zašto se lokalni radnici ne prijavljuju?"
+    },
+    "Section2": {
+      "badge": "Pilot: Rješenje",
+      "heading": "Zašto testiramo legalnu migraciju kao rješenje?",
+      "p1": "Trenutno pilotiramo model legalne migracije kao priliku—ne samo nužnost. Inspirirani iskustvom Hrvatske s radnicima iz Azije, želimo potvrditi u BiH:",
+      "list": {
+        "permits": {
+          "title": "Regulisane radne dozvole",
+          "description": "Potpuno zakonito zapošljavanje uz brzu proceduru (4–6 sedmica). EU zemlje poput Poljske i Mađarske već imaju uspostavljene sisteme."
+        },
+        "costSavings": {
+          "title": "Smanjenje troškova",
+          "description": "Prosječna ušteda od 35 % u odnosu na lokalno zapošljavanje (izvor: Eurostat za Hrvatsku, 2023)."
+        },
+        "flexibleContracts": {
+          "title": "Fleksibilni ugovorni okviri",
+          "description": "Vi određujete trajanje ugovora—sezonski (3–6 mjeseci) ili dugoročni (1+ godina). Imamo u planu da sistem podržava oba modela."
+        }
+      },
+      "benchmark": "Kao benchmark, Hrvatska je 2024. izdala preko 200 000 dozvola—sada testiramo istu metodologiju u pilot-programu za BiH."
+    },
+    "Section3": {
+      "badge": "Naš Pristup (Pilot)",
+      "heading": "Kako planiramo riješiti nedostatak radne snage u BiH (Pilot)",
+      "p1": "U pilot-fazama ćemo kombinirati globalne resurse i lokalno znanje—vaše povratne informacije odmah utječu na svaki korak procesa.",
+      "cards": {
+        "directAgency": {
+          "title": "Direktna Veza s Agencijama",
+          "description": "Ekskluzivni partneri na Filipinima, u Nepalu i Indiji omogućavaju brz pristup pre-verificiranim radnicima."
+        },
+        "legalSupport": {
+          "title": "Cjelovita Pravna Podrška",
+          "description": "Kompletna obrada radnih dozvola i ugovora—a papirologiju svedenu na minimum."
+        },
+        "integrationProgram": {
+          "title": "Integracioni Program",
+          "description": "Pred-polazna obuka o BiH kulturi i osnovama jezika kako bi onboarding protekao glatko."
+        }
+      }
+    },
+    "Section4": {
+      "badge": "Jasne Faze (Pilot)",
+      "heading": "Pilot-Proces Zapošljavanja Stranih Radnika",
+      "p1": "Tijekom pilot-faze testiramo svaki korak kako bismo s vašim povratnim informacijama izgradili brz i siguran proces zapošljavanja.",
+      "timeline": {
+        "step1": {
+          "title": "Aplikacija Poslodavca i Procjena Potrebe",
+          "description": "Pilot konzultacija: zajedno definiramo vaše stvarne potrebe i uvjete za uspjeh."
+        },
+        "step2": {
+          "title": "Izbor Kandidata i Spajanje",
+          "description": "Pilot odabir: biramo i usklađujemo kandidate iz globalnog poola, uz vašu provjeru."
+        },
+        "step3": {
+          "title": "Pravni Dokumenti i Dozvole",
+          "description": "Pilot dokumentacija: pripremamo dozvole, vize i pravne obrasce uz minimalnu papirologiju."
+        },
+        "step4": {
+          "title": "Pripreme Prije Dolaska",
+          "description": "Pilot obuka: organiziramo jezični i kulturološki trening po potrebi prije dolaska u BiH."
+        },
+        "step5": {
+          "title": "Dolazak & Onboarding",
+          "description": "Pilot onboarding: koordiniramo dolazak i prikupljamo vaše povratne informacije za poboljšanja."
+        }
+      }
+    },
+    "Section5": {
+      "badge": "Naše Zalaganje (Pilot)",
+      "heading": "Ispitujemo kako spriječiti gospodarski pad BiH kroz pilot rješenja",
+      "p1": "Pilot-test: kako brza radnička rješenja mogu pomoći BiH već danas",
+      "cta": "Pridruži se našem pilot programu",
+      "pillars": {
+        "economicStability": {
+          "title": "Ekonomska Stabilnost",
+          "description": "Svaki 100 radnika = €5 M zadržano u BiH ekonomiji (model Svjetske Banke)"
+        },
+        "processInnovation": {
+          "title": "Inovacija Procesa",
+          "description": "Optimizacija sistema radnih dozvola u BiH temeljem hrvatskog uspjeha"
+        },
+        "continuousImprovement": {
+          "title": "Kontinuirano Unapređenje",
+          "description": "+30 % brže procesuiranje nakon svake 50 dovršenih ugovora"
+        }
+      },
+      "timelineHeading": "Hipoteze za Pilot (2025–2027)",
+      "timeline": {
+        "step1": {
+          "title": "Postati vodeći partner za radnu snagu u građevinarstvu i poljoprivredi"
+        },
+        "step2": {
+          "title": "Smanjiti vrijeme izdavanja dozvola na prosjek EU (ispod 4 tjedna)"
+        },
+        "step3": {
+          "title": "Proširiti se na 10+ zemalja izvora uz kulturološku obuku"
+        }
+      }
+    },
+    "Section6": {
+      "heading": "Spremni oblikovati budućnost vašeg biznisa?",
+      "p1": "Pridružite se našem pilot programu i zajedno osmislimo rješenje koje će osigurati stabilnu radnu snagu za BiH poslodavce i privrednike.",
+      "cta": "Kontaktirajte Nas Danas"
+    }
+  },
+  "Navigation": {
+    "link-home": "početna",
+    "link-jobs": "poslovi",
+    "link-candidates": "kandidati",
+    "link-employers": "poslodavci",
+    "link-about": "o-nama",
+    "link-pricing": "cijene",
+    "link-contact": "kontakt"
+  },
+  "Header": {
+    "link-our-work": "Projekti",
+    "link-process": "Proces",
+    "link-blog": "Blog",
+    "link-contact-us": "Kontakt",
+    "contact-button": "Kontakt",
+    "language-label": "Izaberite jezik",
+    "language-button": "Jezik",
+    "language-option-bs": "Bosanski",
+    "language-option-en": "Engleski",
+    "language-option-de": "Njemački"
+  },
+  "Footer": {
     "for-candidates": { "title": "Za kandidate" },
     "for-employers": { "title": "Za poslodavce" },
     "about-us": { "title": "O nama" },
@@ -107,4 +266,4 @@
   "Pricing": {
     "page-title": "Cijene"
   }
-  }
+}

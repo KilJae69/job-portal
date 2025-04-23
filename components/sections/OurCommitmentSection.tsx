@@ -17,6 +17,7 @@ import dynamic from "next/dynamic";
 import useLazyLoad from "@/hooks/useLazyLoad";
 import Image from "next/image";
 import PrimaryButton from "../shared/PrimaryButton";
+import { useTranslations } from "next-intl";
 
 const DynamicLottieComponent = dynamic(
   () => import("@/components/shared/LottieComponent"),
@@ -28,43 +29,44 @@ const DynamicLottieComponent = dynamic(
 export default function OurCommitment() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const { ref, isLoaded } = useLazyLoad();
+  const t =  useTranslations("AboutPage");
 
   const timelineItems = [
     {
       year: 2025,
-      title: "Become the #1 workforce partner in construction/agriculture",
+      title: t("Section5.timeline.step1.title"),
       progress: 30,
     },
     {
       year: 2026,
-      title: "Reduce permit times to EU averages (under 4 weeks)",
+      title: t("Section5.timeline.step2.title"),
       progress: 15,
     },
     {
       year: 2027,
-      title: "Expand to 10+ source countries with cultural training",
+      title: t("Section5.timeline.step3.title"),
       progress: 5,
     },
   ];
 
   const commitmentPillars = [
     {
-      title: "Economic Stability",
+      title: t("Section5.pillars.economicStability.title"),
       description:
-        "Every 100 workers placed = €5M retained in BiH's economy (World Bank model)",
+      t("Section5.pillars.economicStability.description"),
       icon: <LineChart className="h-10 w-10 text-accent" />,
       stats: [25, 40, 65, 80],
     },
     {
-      title: "Process Innovation",
+      title: t("Section5.pillars.processInnovation.title"),
       description:
-        "Streamlining BiH's work permit system based on Croatia's success",
+      t("Section5.pillars.processInnovation.description"),
       icon: <Cog className="h-10 w-10 text-accent" />,
       stats: [30, 45, 60, 90],
     },
     {
-      title: "Continuous Improvement",
-      description: "+30% faster processing with each 50 contracts completed",
+      title: t("Section5.pillars.continuousImprovement.title"),
+      description: t("Section5.pillars.continuousImprovement.description"),
       icon: <TrendingUp className="h-10 w-10 text-accent" />,
       stats: [20, 50, 70, 95],
     },
@@ -76,12 +78,12 @@ export default function OurCommitment() {
         {/* Hero Section */}
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-6">
-            <MovingBorderBadge text="Naše Zalaganje (Pilot)" />
+            <MovingBorderBadge text={t("Section5.badge")} />
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            Ispitujemo kako spriječiti gospodarski pad BiH kroz pilot rješenja
+            {t("Section5.heading")}
             </h2>
             <p className="text-xl text-muted-foreground">
-            Pilot-test: kako brza radnička rješenja mogu pomoći BiH već danas
+            {t("Section5.p1")}
             </p>
             <m.div
               whileHover={{ scale: 1.05 }}
@@ -92,7 +94,7 @@ export default function OurCommitment() {
                 variant="solid"
                 className="flex items-center w-fit"
               >
-                Pridruži se našem pilot programu
+                {t("Section5.cta")}
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </PrimaryButton>
             </m.div>

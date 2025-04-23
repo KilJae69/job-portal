@@ -11,6 +11,7 @@ import PrimaryButton from "@/components/shared/PrimaryButton";
 import TimelineItem from "@/components/TimelineItem";
 import { GridBackground } from "@/components/ui/grid-background";
 import negativeTrends from "@/constants/negativeTrendsData";
+import { Locale, locales } from "@/lib/locales";
 import {
   CheckCircleIcon,
   HandshakeIcon,
@@ -18,30 +19,85 @@ import {
   ScaleIcon,
 } from "lucide-react";
 import Image from "next/image";
+import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Metadata } from "next";
 
-export default function AboutPage() {
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
+    t("titleAbout")
+  )}&description=${encodeURIComponent(t("ogDescriptionAbout"))}&locale=${locale}`;
+
+  return {
+    title: t("titleAbout"),
+    description: t("descriptionAbout"),
+    openGraph: {
+      title: t("titleAbout"),
+      description: t("ogDescriptionAbout"),
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: t("titleAbout"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("titleAbout"),
+      description: t("ogDescriptionAbout"),
+      images: [ogImageUrl],
+    },
+  };
+}
+
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+
+  const { locale } = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "AboutPage" });
   return (
     <>
-      <PageIntro title={"About Us"} />
+      <PageIntro title={t('PageIntro.title')} />
       <Container as="section" className="space-y-8 pt-12 lg:pt-24">
         <div className="flex flex-col gap-5 lg:flex-row justify-between">
           <div className="pb-12 lg:pb-24">
             <div className="flex flex-col gap-4">
-              <MovingBorderBadge text="Pilot: Radna Snaga" />
+              <MovingBorderBadge text={t('Section1.badge')} />
               <h2 className="text-h2">
-                Kriza Nedostatka Radnika u BiH (Pilot-Test)
+              {t('Section1.heading')}
               </h2>
               <p className="text-paragraph">
-                Istražujemo pilot-program za rješavanje kritičnog manjka radne
-                snage u BiH: iako stopa nezaposlenosti iznosi 30.2%, ključne
-                pozicije u građevinarstvu, poljoprivredi i ugostiteljstvu ostaju
-                prazne.
+              {t('Section1.p1')}
               </p>
               <p className="text-paragraph">
-                Svake godine 50 000+ radno sposobnih ljudi napusti BiH, a sve
-                manje lokalnih radnika bira fizičke poslove. Naš pilot-test želi
-                provjeriti može li legalna migracija zaustaviti kašnjenja
-                projekata i financijske gubitke.
+              {t('Section1.p2')}
               </p>
             </div>
 
@@ -66,11 +122,11 @@ export default function AboutPage() {
                         <span className="ml-2">{trend.suffix}</span>
                       </span>
                       <p className="text-paragraph font-medium">
-                        {trend.description}
+                      {t(`negativeTrends.${trend.key}.description`)}
                       </p>
                     </div>
                   </div>
-                  <p className="text-paragraph">{trend.detail}</p>
+                  <p className="text-paragraph"> {t(`negativeTrends.${trend.key}.detail`)}</p>
                 </div>
               ))}
             </FadeIn>
@@ -107,26 +163,22 @@ export default function AboutPage() {
 
             {/* Text Content */}
             <div className="w-full pb-10 space-y-6">
-              <MovingBorderBadge text="Pilot: Rješenje" />
+              <MovingBorderBadge text={t('Section2.badge')} />
               <h2 className="text-h2">
-                Zašto testiramo legalnu migraciju kao rješenje?
+              {t('Section2.heading')}
               </h2>
 
               <p className="text-paragraph">
-                Trenutno pilotiramo model legalne migracije kao priliku—ne samo
-                nužnost. Inspirirani hrvatskim iskustvom s radnicima iz Azije,
-                želimo potvrditi u BiH:
+              {t('Section2.p1')}
               </p>
 
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircleIcon className="text-green-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold">Regulisane radne dozvole</h3>
+                    <h3 className="font-bold">{t('Section2.list.permits.title')}</h3>
                     <p className="text-paragraph">
-                      Potpuno zakonito zapošljavanje uz brzu proceduru (4-6
-                      sedmica). EU zemlje poput Poljske i Mađarske već imaju
-                      uspostavljene sisteme.
+                    {t('Section2.list.permits.description')}
                     </p>
                   </div>
                 </li>
@@ -134,10 +186,9 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <CheckCircleIcon className="text-green-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold">Smanjenje troškova</h3>
+                    <h3 className="font-bold">{t('Section2.list.costSavings.title')}</h3>
                     <p className="text-paragraph">
-                      Prosječna ušteda od <strong>35%</strong> u odnosu na
-                      lokalno zapošljavanje (izvor: Eurostat za Hrvatsku, 2023).
+                    {t('Section2.list.costSavings.description')}
                     </p>
                   </div>
                 </li>
@@ -145,11 +196,9 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <CheckCircleIcon className="text-green-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold">Fleksibilni ugovorni okviri</h3>
+                    <h3 className="font-bold">{t('Section2.list.flexibleContracts.title')}</h3>
                     <p className="text-paragraph">
-                      Vi određujete trajanje ugovora - bilo sezonski (3-6
-                      mjeseci) ili dugoročni radnici (1+ godina). Imamo u planu
-                      da sistem podržava oba modela.
+                    {t('Section2.list.flexibleContracts.description')}
                     </p>
                   </div>
                 </li>
@@ -157,8 +206,7 @@ export default function AboutPage() {
 
               <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
                 <p className="text-paragraph italic">
-                  Kao benchmark, Hrvatska je 2024. izdala 200 000+ dozvola — mi
-                  sada testiramo istu metodologiju u pilot programu za BiH.
+                {t('Section2.benchmark')}
                 </p>
               </div>
             </div>
@@ -170,14 +218,13 @@ export default function AboutPage() {
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="w-full flex items-center justify-center mb-4">
-            <MovingBorderBadge text="Naš Pristup (Pilot)" />
+            <MovingBorderBadge text={t('Section3.badge')} />
           </div>
           <h2 className="text-h2">
-            Kako planiramo riješiti nedostatak radne snage u BiH (Pilot)
+          {t('Section3.heading')}
           </h2>
           <p className="text-paragraph mt-4">
-            U pilot-fazama ćemo kombinirati globalne resurse i lokalno znanje —
-            Vaš povratna informacija odmah utječe na svaki korak procesa.
+          {t('Section3.p1')}
           </p>
         </div>
 
@@ -192,11 +239,10 @@ export default function AboutPage() {
                   <HandshakeIcon className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-bold text-xl mb-3">
-                  Direktna Veza sa Agencijama
+                {t('Section3.cards.directAgency.title')}
                 </h3>
                 <p className="text-paragraph">
-                  Ekskluzivni partneri u Filipinima, Nepalu i Indiji omogućavaju
-                  brz pristup pre-verificiranim radnicima.
+                {t('Section3.cards.directAgency.description')}
                 </p>
               </div>
             </div>
@@ -211,11 +257,10 @@ export default function AboutPage() {
                   <ScaleIcon className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-bold text-xl mb-3">
-                  Cjelovita Pravna Podrška
+                {t('Section3.cards.legalSupport.title')}
                 </h3>
                 <p className="text-paragraph">
-                  Kompletan proces od radnih dozvola do ugovora. Smanjujemo
-                  papirologiju za poslodavce na minimum.
+                {t('Section3.cards.legalSupport.description')}
                 </p>
               </div>
             </div>
@@ -229,10 +274,9 @@ export default function AboutPage() {
                 <div className="mb-6 p-4 bg-accent/10 rounded-full group-hover:scale-110 transition-transform">
                   <LanguagesIcon className="w-10 h-10 text-accent" />
                 </div>
-                <h3 className="font-bold text-xl mb-3">Integracioni Program</h3>
+                <h3 className="font-bold text-xl mb-3"> {t('Section3.cards.integrationProgram.title')}</h3>
                 <p className="text-paragraph">
-                  Obuke o BiH kulturi i osnovama jezika prije dolaska,
-                  smanjujući kulturološki šok.
+                {t('Section3.cards.integrationProgram.description')}
                 </p>
               </div>
             </div>
@@ -250,46 +294,44 @@ export default function AboutPage() {
           <div className="flex flex-col">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="w-full flex items-center justify-center mb-4">
-                <MovingBorderBadge text="Jasne Faze (Pilot)" />
+                <MovingBorderBadge text={t('Section4.badge')} />
               </div>
               <h2 className="text-h2">
-                Pilot-Proces Zapošljavanja Stranih Radnika
+              {t('Section4.heading')}
               </h2>
               <p className="text-paragraph mt-4">
-                Tijekom pilot-faze testiramo svaki korak kako bismo s vašim
-                povratnim informacijama izgradili brz i siguran proces
-                zapošljavanja.
+              {t('Section4.p1')}
               </p>
             </div>
             <div className=" mx-auto">
               <TimelineItem
                 number={1}
-                title="Aplikacija Poslodavca i Procjena Potrebe"
-                description="Pilot konzultacija: zajedno definiramo vaše stvarne potrebe i uvjete za uspjeh."
+                title={t('Section4.timeline.step1.title')}
+                description={t('Section4.timeline.step1.description')}
               />
 
               <TimelineItem
                 number={2}
-                title="Izbor Kandidata i Spajanje"
-                description="Pilot odabir: biramo i usklađujemo kandidate iz globalnog poola, uz vašu provjeru."
+                title={t('Section4.timeline.step2.title')}
+                description={t('Section4.timeline.step2.description')}
               />
 
               <TimelineItem
                 number={3}
-                title="Pravni Dokumenti i Dozvole"
-                description="Pilot dokumentacija: pripremamo dozvole, vize i pravne obrasce uz minimalnu papirologiju."
+                title={t('Section4.timeline.step3.title')}
+                description={t('Section4.timeline.step3.description')}
               />
 
               <TimelineItem
                 number={4}
-                title="Pripreme Prije Dolaska"
-                description="Pilot obuka: organiziramo jezični i kulturološki trening po potrebi prije dolaska u BiH."
+                title={t('Section4.timeline.step4.title')}
+                description={t('Section4.timeline.step4.description')}
               />
 
               <TimelineItem
                 number={5}
-                title="Dolazak & Onboarding"
-                description="Pilot onboarding: koordiniramo dolazak i prikupljamo vaše povratne informacije za poboljšanja."
+                title={t('Section4.timeline.step5.title')}
+                description={t('Section4.timeline.step5.description')}
                 isLast={true}
               />
             </div>
@@ -312,18 +354,16 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="flex flex-col gap-6 text-center  md:max-w-1/2">
                 <h2 className="text-h2">
-                  Spremni oblikovati budućnost vašeg biznisa?
+                  {t("Section6.heading")}
                 </h2>
                 <p className="text-paragraph">
-                  Pridružite se našem pilot programu i zajedno osmislimo
-                  rješenje koje će osigurati stabilnu radnu snagu za BiH
-                  poslodavce i privrednike.
+                {t("Section6.p1")}
                 </p>
                 <PrimaryButton
                   className="w-fit self-center whitespace-nowrap"
                   href="/contact"
                 >
-                  Kontaktirajte Nas Danas
+                 {t("Section6.cta")}
                 </PrimaryButton>
               </div>
               <div className="relative">
