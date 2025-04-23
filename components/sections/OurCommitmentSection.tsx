@@ -76,12 +76,12 @@ export default function OurCommitment() {
         {/* Hero Section */}
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-6">
-            <MovingBorderBadge text="Naše Zalaganje" />
+            <MovingBorderBadge text="Naše Zalaganje (Pilot)" />
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Preventing Economic Collapse in BiH Through Workforce Solutions
+            Ispitujemo kako spriječiti gospodarski pad BiH kroz pilot rješenja
             </h2>
             <p className="text-xl text-muted-foreground">
-              Bridging the labor gap today to secure Bosnia&apos;s tomorrow
+            Pilot-test: kako brza radnička rješenja mogu pomoći BiH već danas
             </p>
             <m.div
               whileHover={{ scale: 1.05 }}
@@ -92,7 +92,7 @@ export default function OurCommitment() {
                 variant="solid"
                 className="flex items-center w-fit"
               >
-                Join us in rebuilding BiH&apos;s workforce
+                Pridruži se našem pilot programu
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </PrimaryButton>
             </m.div>
@@ -178,7 +178,7 @@ export default function OurCommitment() {
 
         {/* Goal Timeline */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold">Our Roadmap to Success</h3>
+          <h3 className="text-2xl font-bold">Hipoteze za Pilot (2025–2027)</h3>
           <div className="relative">
             <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-accent to-accent/20 rounded-full"></div>
             <div className="space-y-8 pl-6">

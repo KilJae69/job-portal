@@ -4,6 +4,7 @@
       "about": "German page"
     },
     "Navigation": {
+      "link-home": "startseite",
       "link-jobs": "stellenangebote",
       "link-candidates": "kandidaten",
       "link-employers": "arbeitgeber",

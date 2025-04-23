@@ -27,21 +27,21 @@ export default function AboutPage() {
         <div className="flex flex-col gap-5 lg:flex-row justify-between">
           <div className="pb-12 lg:pb-24">
             <div className="flex flex-col gap-4">
-              <MovingBorderBadge text="Radna Snaga" />
+              <MovingBorderBadge text="Pilot: Radna Snaga" />
               <h2 className="text-h2">
-                Kriza Nedostatka Radnika u Bosni i Hercegovini
+                Kriza Nedostatka Radnika u BiH (Pilot-Test)
               </h2>
               <p className="text-paragraph">
-                Bosna i Hercegovina se suočava sa kritičnim nedostatkom radne
-                snage - iako je stopa nezaposlenosti visoka (30.2%), poslodavci
-                ne mogu naći radnike za ključne pozicije u građevinarstvu,
-                poljoprivredi i ugostiteljstvu.
+                Istražujemo pilot-program za rješavanje kritičnog manjka radne
+                snage u BiH: iako stopa nezaposlenosti iznosi 30.2%, ključne
+                pozicije u građevinarstvu, poljoprivredi i ugostiteljstvu ostaju
+                prazne.
               </p>
               <p className="text-paragraph">
-                Godišnje preko 50,000 ljudi napusti BiH zbog boljih plata u EU,
-                dok se lokalni radnici sve manje interesuju za fizikalne
-                poslove. Rezultat? Kašnjenja projekata, gubici u proizvodnji i
-                opasnost zatvaranja firmi.
+                Svake godine 50 000+ radno sposobnih ljudi napusti BiH, a sve
+                manje lokalnih radnika bira fizičke poslove. Naš pilot-test želi
+                provjeriti može li legalna migracija zaustaviti kašnjenja
+                projekata i financijske gubitke.
               </p>
             </div>
 
@@ -107,16 +107,15 @@ export default function AboutPage() {
 
             {/* Text Content */}
             <div className="w-full pb-10 space-y-6">
-              <MovingBorderBadge text="Dokazano Rješenje" />
+              <MovingBorderBadge text="Pilot: Rješenje" />
               <h2 className="text-h2">
-                Zašto je Legalna Migracija Ključ za BiH Privredu?
+                Zašto testiramo legalnu migraciju kao rješenje?
               </h2>
 
               <p className="text-paragraph">
-                Legalna migracija radnika{" "}
-                <strong>nije samo nužnost - nego prilika</strong>. Kao što
-                Hrvatska već godinama uspješno radi sa radnicama iz Azije, mi
-                omogućavamo BiH kompanijama da riješe nedostatak kadrova kroz:
+                Trenutno pilotiramo model legalne migracije kao priliku—ne samo
+                nužnost. Inspirirani hrvatskim iskustvom s radnicima iz Azije,
+                želimo potvrditi u BiH:
               </p>
 
               <ul className="space-y-4">
@@ -149,8 +148,8 @@ export default function AboutPage() {
                     <h3 className="font-bold">Fleksibilni ugovorni okviri</h3>
                     <p className="text-paragraph">
                       Vi određujete trajanje ugovora - bilo sezonski (3-6
-                      mjeseci) ili dugoročni radnici (1+ godina). Naš sistem
-                      podržava oba modela.
+                      mjeseci) ili dugoročni radnici (1+ godina). Imamo u planu
+                      da sistem podržava oba modela.
                     </p>
                   </div>
                 </li>
@@ -158,9 +157,8 @@ export default function AboutPage() {
 
               <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
                 <p className="text-paragraph italic">
-                  Hrvatska je 2024. izdala više od{" "}
-                  <strong>200,000 radnih dozvola</strong> stranim radnicima -
-                  dokaz da legalni modeli funkcionišu!
+                  Kao benchmark, Hrvatska je 2024. izdala 200 000+ dozvola — mi
+                  sada testiramo istu metodologiju u pilot programu za BiH.
                 </p>
               </div>
             </div>
@@ -172,15 +170,14 @@ export default function AboutPage() {
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="w-full flex items-center justify-center mb-4">
-            <MovingBorderBadge text="Naš Pristup" />
+            <MovingBorderBadge text="Naš Pristup (Pilot)" />
           </div>
           <h2 className="text-h2">
-            Kako Rješavamo Nedostatak Radne Snage u BiH
+            Kako planiramo riješiti nedostatak radne snage u BiH (Pilot)
           </h2>
           <p className="text-paragraph mt-4">
-            Kombiniramo globalne resurse sa lokalnim znanjem kako bismo riješili
-            nedostatak radne snage u BiH kroz potpuno legalne i organizirane
-            procese.
+            U pilot-fazama ćemo kombinirati globalne resurse i lokalno znanje —
+            Vaš povratna informacija odmah utječe na svaki korak procesa.
           </p>
         </div>
 
@@ -253,45 +250,46 @@ export default function AboutPage() {
           <div className="flex flex-col">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="w-full flex items-center justify-center mb-4">
-                <MovingBorderBadge text="Jasne Faze" />
+                <MovingBorderBadge text="Jasne Faze (Pilot)" />
               </div>
               <h2 className="text-h2">
-                Transparentan Proces Zapošljavanja Stranih Radnika
+                Pilot-Proces Zapošljavanja Stranih Radnika
               </h2>
               <p className="text-paragraph mt-4">
-                Naš sistem kombinuje globalne standarde sa lokalnim zakonima
-                kako bismo osigurali brz i siguran proces zapošljavanja.
+                Tijekom pilot-faze testiramo svaki korak kako bismo s vašim
+                povratnim informacijama izgradili brz i siguran proces
+                zapošljavanja.
               </p>
             </div>
             <div className=" mx-auto">
               <TimelineItem
                 number={1}
-                title="Employer Application & Needs Assessment"
-                description="We begin with a thorough consultation to understand your specific workforce needs, company culture, and requirements."
+                title="Aplikacija Poslodavca i Procjena Potrebe"
+                description="Pilot konzultacija: zajedno definiramo vaše stvarne potrebe i uvjete za uspjeh."
               />
 
               <TimelineItem
                 number={2}
-                title="Candidate Selection & Matching"
-                description="Our team identifies and vets qualified candidates from our global talent pool, ensuring skills and experience align with your needs."
+                title="Izbor Kandidata i Spajanje"
+                description="Pilot odabir: biramo i usklađujemo kandidate iz globalnog poola, uz vašu provjeru."
               />
 
               <TimelineItem
                 number={3}
-                title="Legal Documentation & Permits"
-                description="We handle all work permits, visas, and legal requirements to ensure full compliance with BiH regulations."
+                title="Pravni Dokumenti i Dozvole"
+                description="Pilot dokumentacija: pripremamo dozvole, vize i pravne obrasce uz minimalnu papirologiju."
               />
 
               <TimelineItem
                 number={4}
-                title="Pre-Departure Preparation"
-                description="Selected workers receive language training, cultural orientation, and job-specific preparation before traveling to BiH."
+                title="Pripreme Prije Dolaska"
+                description="Pilot obuka: organiziramo jezični i kulturološki trening po potrebi prije dolaska u BiH."
               />
 
               <TimelineItem
                 number={5}
-                title="Arrival & Onboarding"
-                description="We coordinate worker arrival, accommodation, and provide comprehensive onboarding support to ensure a smooth transition."
+                title="Dolazak & Onboarding"
+                description="Pilot onboarding: koordiniramo dolazak i prikupljamo vaše povratne informacije za poboljšanja."
                 isLast={true}
               />
             </div>
@@ -313,18 +311,19 @@ export default function AboutPage() {
 
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="flex flex-col gap-6 text-center  md:max-w-1/2">
-                <h2 className="text-h2">Ready to Save Your Bussiness?</h2>
+                <h2 className="text-h2">
+                  Spremni oblikovati budućnost vašeg biznisa?
+                </h2>
                 <p className="text-paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                  quam quas laudantium modi delectus quod, omnis, dolor dolorum
-                  explicabo at labore libero sit qui eius dolorem corporis
-                  deserunt commodi esse?
+                  Pridružite se našem pilot programu i zajedno osmislimo
+                  rješenje koje će osigurati stabilnu radnu snagu za BiH
+                  poslodavce i privrednike.
                 </p>
                 <PrimaryButton
                   className="w-fit self-center whitespace-nowrap"
                   href="/contact"
                 >
-                  Contact Us Now
+                  Kontaktirajte Nas Danas
                 </PrimaryButton>
               </div>
               <div className="relative">

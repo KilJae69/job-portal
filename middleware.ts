@@ -20,6 +20,6 @@ export const config = {
 
     // Keep the original locale-based matching
     '/',
-    '/(de|en|bs)/:path*'
+    '/(en|bs)/:path*'
   ]
 };

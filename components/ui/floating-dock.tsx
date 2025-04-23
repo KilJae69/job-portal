@@ -22,9 +22,9 @@ export const FloatingDock = ({ className }: { className?: string }) => {
   const languages = [
     { code: "en", country: t("language-option-en"), flag: "/icons/en.png" },
     { code: "bs", country: t("language-option-bs"), flag: "/icons/bs.png" },
-    { code: "de", country: t("language-option-de"), flag: "/icons/de.png" },
+    // { code: "de", country: t("language-option-de"), flag: "/icons/de.png" },
   ];
-
+console.log(languages);
   return (
     <>
       <FloatingDockDesktop items={languages} path={pathname} className={className} />

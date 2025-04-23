@@ -5,6 +5,7 @@
   },
 
   "Navigation": {
+    "link-home": "home",
     "link-jobs": "jobs",
     "link-candidates": "candidates",
     "link-employers": "employers",

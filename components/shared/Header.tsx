@@ -64,11 +64,11 @@ export default function Header() {
       country: t("Header.language-option-bs"),
       flag: "/icons/bs.png",
     },
-    {
-      code: "de",
-      country: t("Header.language-option-de"),
-      flag: "/icons/de.png",
-    },
+    // {
+    //   code: "de",
+    //   country: t("Header.language-option-de"),
+    //   flag: "/icons/de.png",
+    // },
   ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -108,7 +108,7 @@ export default function Header() {
             //   height: headerState === "small" ? 70 : 100,
             // }}
             // transition={{ type: "tween", duration: 0.2 }}
-            className="relative w-[120px] h-[40px] sm:w-[180px] sm:h-[80px]"
+            className="relative w-[120px] h-[40px] lg:w-[180px] lg:h-[80px]"
           >
             <Link href="/" aria-label="Home">
               <Image

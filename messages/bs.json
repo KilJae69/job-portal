@@ -4,6 +4,7 @@
       "about": "Bs page"
     },
     "Navigation": {
+      "link-home": "početna",
       "link-jobs": "poslovi",
       "link-candidates": "kandidati",
       "link-employers": "poslodavci",
