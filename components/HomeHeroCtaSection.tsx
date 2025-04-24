@@ -32,7 +32,7 @@ export default function HomeHeroCTASection() {
             </h2>
 
             {/* Subhead */}
-            <p className="text-muted-foreground text-lg">
+            <p className="text-paragraph">
               We’re prototyping a fully compliant foreign-staffing platform for
               BiH employers. Sign up to shape features, give feedback, and get
               early access.

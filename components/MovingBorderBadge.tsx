@@ -9,7 +9,7 @@ export function MovingBorderBadge({text}:{text:string}) {
       <Button
       as={"div"}
         borderRadius="1.75rem"
-        className="bg-white  text-accent py-2 px-4 text-xl font-semibold  border-neutral-200 "
+        className="bg-blue-100  text-accent py-2 px-4 text-xl font-semibold  border-neutral-200 "
       >
         {text}
       </Button>
