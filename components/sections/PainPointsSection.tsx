@@ -40,7 +40,7 @@ export function PainPointsSection() {
           </p>
         </div>
 
-        <div className="relative mt-16 px-4">
+        <div className="relative mt-16">
           {/* Overlapping cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4">
             {painPoints.map((point, index) => (
