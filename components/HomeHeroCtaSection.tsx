@@ -7,21 +7,24 @@ import { CircleCheck, Clock, Globe, HandshakeIcon } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 
-
 import { Container } from "./shared/Container";
 import PrimaryButton from "./shared/PrimaryButton";
 import { MovingBorderBadge } from "./MovingBorderBadge";
+import { FadeIn, FadeInStagger } from "./shared/FadeIn";
 
 export default function HomeHeroCTASection() {
-
-
   return (
     <section className="w-full relative pt-24 sm:pt-36 pb-12 bg-gradient-to-br from-slate-50 to-slate-100">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-18 items-center">
           <div className="space-y-6">
             {/* Beta badge */}
-            <MovingBorderBadge text="Beta launch" icon={ <Clock className="mr-1 h-4 w-4" />}/>
+            <FadeIn>
+              <MovingBorderBadge
+                text="Beta launch"
+                icon={<Clock className="mr-1 h-4 w-4" />}
+              />
+            </FadeIn>
             {/* <div className="inline-flex items-center rounded-lg bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
               <Clock className="mr-1 h-4 w-4" />
               <span>Beta Launch</span>
@@ -42,37 +45,43 @@ export default function HomeHeroCTASection() {
 
             {/* Feature Cards */}
             <div className="space-y-4">
-              <div className="grid gap-2 sm:grid-cols-3">
-                <Card className="bg-white/50 border-0 shadow-sm">
-                  <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
-                    <Clock className="h-8 w-8 text-blue-600 mb-2" />
-                    <h3 className="font-bold">Pilot Program</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Influence our roadmap from day one
-                    </p>
-                  </CardContent>
-                </Card>
+              <FadeInStagger className="grid gap-2 sm:grid-cols-3">
+                <FadeIn>
+                  <Card className="bg-white/50 border-0 shadow-sm">
+                    <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
+                      <Clock className="h-8 w-8 text-blue-600 mb-2" />
+                      <h3 className="font-bold">Pilot Program</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Influence our roadmap from day one
+                      </p>
+                    </CardContent>
+                  </Card>
+                </FadeIn>
 
-                <Card className="bg-white/50 border-0 shadow-sm">
-                  <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
-                    <Globe className="h-8 w-8 text-blue-600 mb-2" />
-                    <h3 className="font-bold">Global Network</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Agency partners in PH, NP & IN
-                    </p>
-                  </CardContent>
-                </Card>
+                <FadeIn>
+                  <Card className="bg-white/50 border-0 shadow-sm">
+                    <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
+                      <Globe className="h-8 w-8 text-blue-600 mb-2" />
+                      <h3 className="font-bold">Global Network</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Agency partners in PH, NP & IN
+                      </p>
+                    </CardContent>
+                  </Card>
+                </FadeIn>
 
-                <Card className="bg-white/50 border-0 shadow-sm">
-                  <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
-                    <HandshakeIcon className="h-8 w-8 text-blue-600 mb-2" />
-                    <h3 className="font-bold">Compliance First</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Built around BiH labor regulations
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
+                <FadeIn>
+                  <Card className="bg-white/50 border-0 shadow-sm">
+                    <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
+                      <HandshakeIcon className="h-8 w-8 text-blue-600 mb-2" />
+                      <h3 className="font-bold">Compliance First</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Built around BiH labor regulations
+                      </p>
+                    </CardContent>
+                  </Card>
+                </FadeIn>
+              </FadeInStagger >
 
               {/* Bullet list */}
               <ul className="space-y-2">
@@ -92,11 +101,11 @@ export default function HomeHeroCTASection() {
             </div>
 
             {/* CTA + Dialog */}
-            <div className="flex flex-col sm:flex-row gap-4">
-             
-                  <PrimaryButton href="/contact">Join Our Early Access List</PrimaryButton>
-            
-            </div>
+            <FadeIn className="flex flex-col sm:flex-row gap-4">
+              <PrimaryButton href="/contact">
+                Join Our Early Access List
+              </PrimaryButton>
+            </FadeIn>
 
             {/* Partner / pilot info */}
             <div className="pt-4 border-t">
