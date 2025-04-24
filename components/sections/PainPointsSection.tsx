@@ -6,6 +6,7 @@ import { useState } from "react"
 import {  X } from "lucide-react"
 import { painPoints } from "@/constants/painPointsData"
 import { Container } from "../shared/Container"
+import { MovingBorderBadge } from "../MovingBorderBadge"
 
 
 
@@ -33,10 +34,11 @@ export function PainPointsSection() {
       </div>
 
       <Container className=" relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-h2 font-bold text-gray-900 mb-3">The Real-World Impact</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Employers across Bosnia share these common challenges
+        <div className="text-center flex items-center flex-col mb-12">
+          <MovingBorderBadge text="Real Impact" className=""/>
+          <h2 className="text-h2  my-3">The Real-World Impact</h2>
+          <p className="text-paragraph max-w-3xl mx-auto">
+            Employers across Bosnia share these common challenges. Are you among them?
           </p>
         </div>
 

@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import { Container } from "./shared/Container";
 import PrimaryButton from "./shared/PrimaryButton";
+import { MovingBorderBadge } from "./MovingBorderBadge";
 
 export default function HomeHeroCTASection() {
 
@@ -20,10 +21,11 @@ export default function HomeHeroCTASection() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-18 items-center">
           <div className="space-y-6">
             {/* Beta badge */}
-            <div className="inline-flex items-center rounded-lg bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
+            <MovingBorderBadge text="Beta launch" icon={ <Clock className="mr-1 h-4 w-4" />}/>
+            {/* <div className="inline-flex items-center rounded-lg bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
               <Clock className="mr-1 h-4 w-4" />
               <span>Beta Launch</span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">

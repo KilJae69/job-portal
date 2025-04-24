@@ -1,4 +1,5 @@
 import HomeHeroCTASection from "@/components/HomeHeroCtaSection";
+import { MovingBorderBadge } from "@/components/MovingBorderBadge";
 import { PainPointsSection } from "@/components/sections/PainPointsSection";
 
 import {
@@ -15,8 +16,9 @@ export default function Home() {
       <HomeHeroCTASection />
       <section className="w-full py-12 lg:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-h2 mb-3">
+          <div className="flex flex-col items-center  mb-12">
+          <MovingBorderBadge text="Negative Trends" className=""/>
+            <h2 className="text-h2 mt-3 mb-3">
               Bosnia&apos;s Workforce Challenge
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
