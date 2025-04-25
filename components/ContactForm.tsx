@@ -1,33 +1,27 @@
-"use client"
-import { useState } from "react"
-import type React from "react"
+"use client";
+import { useState } from "react";
+import type React from "react";
 
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { cn } from "@/lib/utils"
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-// Define the contact form schema with Zod
-const contactFormSchema = z.object({
-  firstName: z.string().min(2, { message: "First name must be at least 2 characters" }),
-  lastName: z.string().min(2, { message: "Last name must be at least 2 characters" }),
-  phone: z.string().optional(),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
-})
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
+import { MovingBorderBadge } from "./MovingBorderBadge";
+import { FadeIn } from "./shared/FadeIn";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { contactFormSchema, TContactFormSchema } from "@/lib/contactSchema";
 
-// TypeScript type for the form values
-type ContactFormValues = z.infer<typeof contactFormSchema>
+
 
 // Props interface for reusability
 interface ContactFormProps {
-  onSubmitSuccess?: (data: ContactFormValues) => void
-  defaultValues?: Partial<ContactFormValues>
-  className?: string
-  submitButtonText?: string
+  onSubmitSuccess?: (data: TContactFormSchema) => void;
+  defaultValues?: Partial<TContactFormSchema>;
+  className?: string;
   
 }
 
@@ -35,11 +29,12 @@ export default function ContactForm({
   onSubmitSuccess,
   defaultValues,
   className,
-  submitButtonText = "Send Message",
- 
+  
 }: ContactFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const t = useTranslations("ContactForm");
+ 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   // Initialize React Hook Form with Zod resolver
   const {
@@ -47,8 +42,8 @@ export default function ContactForm({
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
+  } = useForm<TContactFormSchema>({
+    resolver: zodResolver(contactFormSchema(t)),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -57,93 +52,123 @@ export default function ContactForm({
       message: "",
       ...defaultValues,
     },
-  })
+  });
 
   // Form submission handler
-  const onSubmit = async (data: ContactFormValues) => {
-    setIsSubmitting(true)
+  const onSubmit = async (data: TContactFormSchema) => {
+    setIsSubmitting(true);
     try {
       // Call the custom submit handler if provided
       if (onSubmitSuccess) {
-        await onSubmitSuccess(data)
+        await onSubmitSuccess(data);
       }
-      setSubmitSuccess(true)
-      reset() // Reset form after successful submission
+      setSubmitSuccess(true);
+      reset(); // Reset form after successful submission
     } catch (error) {
-      console.error("Form submission error:", error)
+      console.error("Form submission error:", error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <div
       className={cn(
-        "shadow-input mx-auto w-full max-w-xl rounded-none bg-white p-4 md:rounded-2xl md:p-8 ",
-        className,
+        "shadow-input mx-auto w-full max-w-xl rounded-none bg-white md:rounded-2xl  ",
+        className
       )}
     >
-      <h2 className="text-h2">Get in Touch</h2>
+      <FadeIn>
+        <MovingBorderBadge text={t("badge")} />
+      </FadeIn>
+      <h2 className="text-h2 my-3">{t("heading")}</h2>
       <p className="text-paragraph">
-        Fill out the form below and we&apos;ll get back to you as soon as possible.
+      {t("subheading")}
       </p>
 
       {submitSuccess ? (
-        <div className="my-8 rounded-md bg-green-50 p-4 ">
-          <p className="text-green-800 ">Thank you for your message! We&apos;ll be in touch soon.</p>
+        <div className="my-8 rounded-md bg-green-50 p-4 flex items-center">
+          <Image src="/animations/success.gif" alt="success" width={200} height={200}/>
+          <p className="text-green-800 ">
+            Thank you for your message! We&apos;ll be in touch soon.
+          </p>
         </div>
       ) : (
-        <form className="my-8" onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-            <LabelInputContainer>
-              <Label htmlFor="firstName">First name</Label>
-              <Input id="firstName" placeholder="John" {...register("firstName")} />
-              <ErrorMessage>{errors.firstName?.message}</ErrorMessage>
-            </LabelInputContainer>
-            <LabelInputContainer>
-              <Label htmlFor="lastName">Last name</Label>
-              <Input id="lastName" placeholder="Doe" {...register("lastName")} />
-              <ErrorMessage>{errors.lastName?.message}</ErrorMessage>
-            </LabelInputContainer>
-          </div>
-
-          <LabelInputContainer className="mb-4">
-            <Label htmlFor="phone">Phone (optional)</Label>
-            <Input id="phone" placeholder="+1 (555) 123-4567" type="tel" {...register("phone")} />
-            <ErrorMessage>{errors.phone?.message}</ErrorMessage>
-          </LabelInputContainer>
-
-          <LabelInputContainer className="mb-4">
-            <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="john.doe@example.com" type="email" {...register("email")} />
-            <ErrorMessage>{errors.email?.message}</ErrorMessage>
-          </LabelInputContainer>
-
-          <LabelInputContainer className="mb-8">
-            <Label htmlFor="message">Message</Label>
-            <Textarea
-              id="message"
-              placeholder="How can we help you?"
-              className="min-h-[120px] resize-y"
-              {...register("message")}
-            />
-            <ErrorMessage>{errors.message?.message}</ErrorMessage>
-          </LabelInputContainer>
-
-          <button
-            className="group/btn cursor-pointer relative block h-10 w-full rounded-md bg-gradient-to-br from-accent to-accent/80 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  disabled:opacity-70"
-            type="submit"
-            disabled={isSubmitting}
+        <FadeIn>
+          <form
+            className="my-8 bg-linear-to-b from-accent/20  to-white relative shadow-md p-4 rounded-md"
+            onSubmit={handleSubmit(onSubmit)}
           >
-            {isSubmitting ? "Sending..." : submitButtonText} {!isSubmitting && "→"}
-            <BottomGradient />
-          </button>
+            <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+              <LabelInputContainer>
+                <Label htmlFor="firstName">{t("fields.firstName.label")}</Label>
+                <Input
+                  id="firstName"
+                  placeholder={t("fields.firstName.placeholder")}
+                  {...register("firstName")}
+                />
+                <ErrorMessage>{errors.firstName?.message}</ErrorMessage>
+              </LabelInputContainer>
+              <LabelInputContainer>
+                <Label htmlFor="lastName">{t("fields.lastName.label")}</Label>
+                <Input
+                  id="lastName"
+                  placeholder={t("fields.lastName.placeholder")}
+                  {...register("lastName")}
+                />
+                <ErrorMessage>{errors.lastName?.message}</ErrorMessage>
+              </LabelInputContainer>
+            </div>
 
-         
-        </form>
+            <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+              <LabelInputContainer className="mb-4">
+                <Label htmlFor="phone">{t("fields.phone.label")}</Label>
+                <Input
+                  id="phone"
+                  placeholder={t("fields.phone.placeholder")}
+                  type="tel"
+                  {...register("phone")}
+                />
+                <ErrorMessage>{errors.phone?.message}</ErrorMessage>
+              </LabelInputContainer>
+
+              <LabelInputContainer className="mb-4">
+                <Label htmlFor="email">{t("fields.email.label")}</Label>
+                <Input
+                  id="email"
+                  placeholder="john.doe@gmail.com"
+                  type="email"
+                  {...register("email")}
+                />
+                <ErrorMessage>{errors.email?.message}</ErrorMessage>
+              </LabelInputContainer>
+            </div>
+
+            <LabelInputContainer className="mb-8">
+              <Label htmlFor="message">{t("fields.message.label")}</Label>
+              <Textarea
+                id="message"
+                placeholder={t("fields.message.placeholder")}
+                className="min-h-[120px] resize-y"
+                {...register("message")}
+              />
+              <ErrorMessage>{errors.message?.message}</ErrorMessage>
+            </LabelInputContainer>
+
+            <button
+              className="group/btn cursor-pointer relative block h-10 w-full rounded-md bg-gradient-to-br from-accent to-accent/80 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  disabled:opacity-70"
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? t("pendingButton") : t("submitButton")}{" "}
+              {!isSubmitting && "→"}
+              <BottomGradient />
+            </button>
+          </form>
+        </FadeIn>
       )}
     </div>
-  )
+  );
 }
 
 // Reusable components
@@ -153,22 +178,24 @@ const BottomGradient = () => {
       <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
       <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
     </>
-  )
-}
+  );
+};
 
 const LabelInputContainer = ({
   children,
   className,
 }: {
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }) => {
-  return <div className={cn("flex w-full flex-col space-y-2", className)}>{children}</div>
-}
+  return (
+    <div className={cn("flex w-full flex-col space-y-2", className)}>
+      {children}
+    </div>
+  );
+};
 
 // Error message component with fixed height to prevent layout shifts
 const ErrorMessage = ({ children }: { children: React.ReactNode }) => {
-  return <div className="min-h-[20px] text-xs text-rose-500 ">{children}</div>
-}
-
-
+  return <div className="min-h-[20px] text-xs text-rose-500 ">{children}</div>;
+};

@@ -10,6 +10,7 @@ import { MovingBorderBadge } from "../MovingBorderBadge";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+
 export function PainPointsSection() {
   const t = useTranslations("HomePage");
   const [expandedCard, setExpandedCard] = useState<number | null>(null);

@@ -43,7 +43,7 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
   
     // Use useLocale to get the current locale
     const currentLocale = useLocale();
-  
+ 
     // Find the current language based on the locale
     const currentLanguage = items.find((item) => item.code === currentLocale) || items[0];
   

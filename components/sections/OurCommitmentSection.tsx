@@ -83,10 +83,10 @@ export default function OurCommitment() {
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-6">
             <MovingBorderBadge text={t("Section5.badge")} />
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+            <h2 className="text-h2">
             {t("Section5.heading")}
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-paragraph">
             {t("Section5.p1")}
             </p>
             <m.div

@@ -41,7 +41,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   return (
     <html
       lang={locale}
-      className={`${poppins.variable} h-full bg-white text-base antialiased`}
+      className={`${poppins.className} h-full bg-white text-base antialiased`}
     >
       <body className="flex min-h-full flex-col ">
         <NextIntlClientProvider messages={messages}>

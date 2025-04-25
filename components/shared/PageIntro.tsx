@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Breadcrumbs from "./Breadcrumbs";
+// import Breadcrumbs from "./Breadcrumbs";
 import { Container } from "./Container";
 import { FadeIn } from "./FadeIn";
 
@@ -17,7 +17,7 @@ export default function PageIntro({ title }: { title: string }) {
           <h1 className="text-2xl font-bold tracking-widest text-slate-800 lg:text-4xl">
             {title}
           </h1>
-          <Breadcrumbs />
+         
         </FadeIn>
       </Container>
     </section>

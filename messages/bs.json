@@ -8,17 +8,17 @@
     "ogCTA2": "Saznaj više",
     "ogPillBlog": "Blog",
     "ogPillProject": "Projekt",
-    "titleHome": "Spark Studio |  Agencija za Web Razvoj",
-    "descriptionHome": "Dobrodošli u Spark Studio, vodeću agenciju za web razvoj koja spaja savremeni dizajn i tehnologiju za izradu prilagođenih rješenja. Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
-    "ogDescriptionHome": "Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
+    "titleHome": "Superio | Pilot Program za Rješavanje Nedostatka Radne Snage u BiH",
+    "descriptionHome": "Pridružite se pilot-programu Superio i su-kreirajte potpuno usklađenu platformu za zapošljavanje stranih radnika u BiH—oblikujte razvojni put, dajte povratne informacije i osigurajte rani pristup.",
+    "ogDescriptionHome": "Sudjelujte u pilot-programu Superio i pomozite prototipirati pravno usklađeno rješenje za kritični nedostatak radne snage u BiH.",
 
     "titleAbout": "Pilot Program | Rješavanje Nedostatka Radne Snage u BiH",
     "descriptionAbout": "Saznajte više o našem pilot programu za su-kreiranje legalnog modela zapošljavanja stranih radnika u BiH. Pridružite nam se i oblikujte budućnost radne snage.",
     "ogDescriptionAbout": "Istražite naš pilot program za legalno zapošljavanje stranih radnika u BiH i sudjelujte u su-kreiranju učinkovitog rješenja.",
 
-    "titleContact": "Spark Studio | Kontaktirajte Nas za Vaše Sljedeće Ideje",
-    "descriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima. Bilo da planirate web stranicu, aplikaciju ili strategiju brendiranja, naš tim je spreman da radi s vama.",
-    "ogDescriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima."
+    "titleContact": "Superio | Kontaktirajte Naš Pilot Tim",
+    "descriptionContact": "Obratite se Superio pilot timu kako biste saznali kako se možete pridružiti našem prototipu zapošljavanja stranih radnika, podijeliti povratne informacije ili postati osnivački partner. Zajedno ćemo riješiti nedostatak radne snage u BiH.",
+    "ogDescriptionContact": "Kontaktirajte Superio pilot tim za prijavu, pitanja ili partnerstvo u izradi usklađenog rješenja za zapošljavanje stranih radnika u BiH."
   },
   "HomePage": {
     "HeroSection": {
@@ -295,6 +295,56 @@
       "p1": "Pridružite se našem pilot programu i zajedno osmislimo rješenje koje će osigurati stabilnu radnu snagu za BiH poslodavce i privrednike.",
       "cta": "Kontaktirajte Nas Danas"
     }
+  },
+  "ContactPage": {
+    "h1":"Kontakt",
+     "h3":"Kontaktirajte nas direktno:"
+  },
+  "ContactForm": {
+    "badge":"Djeluj Odmah",
+    "heading":"Kontaktirajte Nas",
+    "subheading": "Popunite formu ispod i javit ćemo Vam se u što skorijem roku.",
+    "fields": {
+      "firstName": {
+        "label": "Ime *",
+        "placeholder": "Vaše ime"
+      },
+      "lastName": {
+        "label": "Prezime *",
+        "placeholder": "Vaše prezime"
+      },
+      "email": {
+        "label": "Email *",
+        "placeholder": "Vaša email adresa"
+      },
+      "company": {
+        "label": "Kompanija *",
+        "placeholder": "Naziv vaše kompanije"
+      },
+      "phone": {
+        "label": "Telefon (neobavezno)",
+        "placeholder": "+38761123456"
+      },
+      "message": {
+        "label": "Poruka *",
+        "placeholder": "Kako Vam možemo pomoći?"
+      }
+    },
+    "submitButton": "Pošalji Poruku",
+    "pendingButton": "Šaljem...",
+    "validation": {
+      "required": "Ovo polje je obavezno.",
+      "nameMax": "Ime mora imati manje od 100 znakova.",
+      "nameLetters": "Vaše ime smije sadržavati samo slova.",
+      "emailInvalid": "Nevažeća e-mail adresa.",
+      "emailMax": "E-mail mora imati manje od 100 znakova.",
+      "phoneInvalid": "Nevažeći format telefonskog broja.",
+      "phoneMax": "Telefonski broj mora imati manje od 20 znakova.",
+      "subjectMax": "Naslov mora imati manje od 100 znakova.",
+      "messageMax": "Poruka mora imati manje od 1000 znakova."
+    },
+    "successMessage": "Vaša poruka je uspješno poslana!",
+    "errorMessage": "Nešto je pošlo po zlu. Molimo pokušajte ponovo kasnije."
   },
   "Navigation": {
     "link-home": "početna",
