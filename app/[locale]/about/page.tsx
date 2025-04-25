@@ -1,15 +1,14 @@
 import AboutBubbles from "@/components/AboutBubbles";
 import CountUp from "@/components/CountUp";
-import CtaBubbles from "@/components/CtaBubbles";
+
 import { MovingBorderBadge } from "@/components/MovingBorderBadge";
-import OurCommitment from "@/components/sections/OurCommitmentSection";
+
 
 import { Container } from "@/components/shared/Container";
 import { FadeIn, FadeInStagger } from "@/components/shared/FadeIn";
 import PageIntro from "@/components/shared/PageIntro";
-import PrimaryButton from "@/components/shared/PrimaryButton";
+
 import TimelineItem from "@/components/TimelineItem";
-import { GridBackground } from "@/components/ui/grid-background";
 import negativeTrends from "@/constants/negativeTrendsData";
 import { Locale, locales } from "@/lib/locales";
 import {
@@ -22,6 +21,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
+import CTASection from "@/components/sections/CTASection";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
 
@@ -40,9 +40,13 @@ export async function generateMetadata({
 
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
+  const ogImageUrl = `${
+    process.env.NEXT_PUBLIC_SITE_URL
+  }/api/og?title=${encodeURIComponent(
     t("titleAbout")
-  )}&description=${encodeURIComponent(t("ogDescriptionAbout"))}&locale=${locale}`;
+  )}&description=${encodeURIComponent(
+    t("ogDescriptionAbout")
+  )}&locale=${locale}`;
 
   return {
     title: t("titleAbout"),
@@ -71,9 +75,8 @@ export async function generateMetadata({
 export default async function AboutPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }) {
-
   const { locale } = await params;
 
   if (!locales.includes(locale as Locale)) {
@@ -84,21 +87,15 @@ export default async function AboutPage({
   const t = await getTranslations({ locale, namespace: "AboutPage" });
   return (
     <>
-      <PageIntro title={t('PageIntro.title')} />
+      <PageIntro title={t("PageIntro.title")} />
       <Container as="section" className="space-y-8 pt-12 lg:pt-24">
         <div className="flex flex-col gap-5 lg:flex-row justify-between">
           <div className="pb-12 lg:pb-24">
             <div className="flex flex-col gap-4">
-              <MovingBorderBadge text={t('Section1.badge')} />
-              <h2 className="text-h2">
-              {t('Section1.heading')}
-              </h2>
-              <p className="text-paragraph">
-              {t('Section1.p1')}
-              </p>
-              <p className="text-paragraph">
-              {t('Section1.p2')}
-              </p>
+              <MovingBorderBadge text={t("Section1.badge")} />
+              <h2 className="text-h2">{t("Section1.heading")}</h2>
+              <p className="text-paragraph">{t("Section1.p1")}</p>
+              <p className="text-paragraph">{t("Section1.p2")}</p>
             </div>
 
             {/* Negative Trends Cards */}
@@ -122,11 +119,14 @@ export default async function AboutPage({
                         <span className="ml-2">{trend.suffix}</span>
                       </span>
                       <p className="text-paragraph font-medium">
-                      {t(`negativeTrends.${trend.key}.description`)}
+                        {t(`negativeTrends.${trend.key}.description`)}
                       </p>
                     </div>
                   </div>
-                  <p className="text-paragraph"> {t(`negativeTrends.${trend.key}.detail`)}</p>
+                  <p className="text-paragraph">
+                    {" "}
+                    {t(`negativeTrends.${trend.key}.detail`)}
+                  </p>
                 </div>
               ))}
             </FadeIn>
@@ -163,22 +163,20 @@ export default async function AboutPage({
 
             {/* Text Content */}
             <div className="w-full pb-10 space-y-6">
-              <MovingBorderBadge text={t('Section2.badge')} />
-              <h2 className="text-h2">
-              {t('Section2.heading')}
-              </h2>
+              <MovingBorderBadge text={t("Section2.badge")} />
+              <h2 className="text-h2">{t("Section2.heading")}</h2>
 
-              <p className="text-paragraph">
-              {t('Section2.p1')}
-              </p>
+              <p className="text-paragraph">{t("Section2.p1")}</p>
 
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircleIcon className="text-green-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold">{t('Section2.list.permits.title')}</h3>
+                    <h3 className="font-bold">
+                      {t("Section2.list.permits.title")}
+                    </h3>
                     <p className="text-paragraph">
-                    {t('Section2.list.permits.description')}
+                      {t("Section2.list.permits.description")}
                     </p>
                   </div>
                 </li>
@@ -186,9 +184,11 @@ export default async function AboutPage({
                 <li className="flex items-start gap-3">
                   <CheckCircleIcon className="text-green-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold">{t('Section2.list.costSavings.title')}</h3>
+                    <h3 className="font-bold">
+                      {t("Section2.list.costSavings.title")}
+                    </h3>
                     <p className="text-paragraph">
-                    {t('Section2.list.costSavings.description')}
+                      {t("Section2.list.costSavings.description")}
                     </p>
                   </div>
                 </li>
@@ -196,9 +196,11 @@ export default async function AboutPage({
                 <li className="flex items-start gap-3">
                   <CheckCircleIcon className="text-green-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold">{t('Section2.list.flexibleContracts.title')}</h3>
+                    <h3 className="font-bold">
+                      {t("Section2.list.flexibleContracts.title")}
+                    </h3>
                     <p className="text-paragraph">
-                    {t('Section2.list.flexibleContracts.description')}
+                      {t("Section2.list.flexibleContracts.description")}
                     </p>
                   </div>
                 </li>
@@ -206,7 +208,7 @@ export default async function AboutPage({
 
               <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
                 <p className="text-paragraph italic">
-                {t('Section2.benchmark')}
+                  {t("Section2.benchmark")}
                 </p>
               </div>
             </div>
@@ -218,14 +220,10 @@ export default async function AboutPage({
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="w-full flex items-center justify-center mb-4">
-            <MovingBorderBadge text={t('Section3.badge')} />
+            <MovingBorderBadge text={t("Section3.badge")} />
           </div>
-          <h2 className="text-h2">
-          {t('Section3.heading')}
-          </h2>
-          <p className="text-paragraph mt-4">
-          {t('Section3.p1')}
-          </p>
+          <h2 className="text-h2">{t("Section3.heading")}</h2>
+          <p className="text-paragraph mt-4">{t("Section3.p1")}</p>
         </div>
 
         {/* Cards Grid */}
@@ -239,10 +237,10 @@ export default async function AboutPage({
                   <HandshakeIcon className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-bold text-xl mb-3">
-                {t('Section3.cards.directAgency.title')}
+                  {t("Section3.cards.directAgency.title")}
                 </h3>
                 <p className="text-paragraph">
-                {t('Section3.cards.directAgency.description')}
+                  {t("Section3.cards.directAgency.description")}
                 </p>
               </div>
             </div>
@@ -257,10 +255,10 @@ export default async function AboutPage({
                   <ScaleIcon className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-bold text-xl mb-3">
-                {t('Section3.cards.legalSupport.title')}
+                  {t("Section3.cards.legalSupport.title")}
                 </h3>
                 <p className="text-paragraph">
-                {t('Section3.cards.legalSupport.description')}
+                  {t("Section3.cards.legalSupport.description")}
                 </p>
               </div>
             </div>
@@ -274,9 +272,12 @@ export default async function AboutPage({
                 <div className="mb-6 p-4 bg-accent/10 rounded-full group-hover:scale-110 transition-transform">
                   <LanguagesIcon className="w-10 h-10 text-accent" />
                 </div>
-                <h3 className="font-bold text-xl mb-3"> {t('Section3.cards.integrationProgram.title')}</h3>
+                <h3 className="font-bold text-xl mb-3">
+                  {" "}
+                  {t("Section3.cards.integrationProgram.title")}
+                </h3>
                 <p className="text-paragraph">
-                {t('Section3.cards.integrationProgram.description')}
+                  {t("Section3.cards.integrationProgram.description")}
                 </p>
               </div>
             </div>
@@ -294,44 +295,40 @@ export default async function AboutPage({
           <div className="flex flex-col">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="w-full flex items-center justify-center mb-4">
-                <MovingBorderBadge text={t('Section4.badge')} />
+                <MovingBorderBadge text={t("Section4.badge")} />
               </div>
-              <h2 className="text-h2">
-              {t('Section4.heading')}
-              </h2>
-              <p className="text-paragraph mt-4">
-              {t('Section4.p1')}
-              </p>
+              <h2 className="text-h2">{t("Section4.heading")}</h2>
+              <p className="text-paragraph mt-4">{t("Section4.p1")}</p>
             </div>
             <div className=" mx-auto">
               <TimelineItem
                 number={1}
-                title={t('Section4.timeline.step1.title')}
-                description={t('Section4.timeline.step1.description')}
+                title={t("Section4.timeline.step1.title")}
+                description={t("Section4.timeline.step1.description")}
               />
 
               <TimelineItem
                 number={2}
-                title={t('Section4.timeline.step2.title')}
-                description={t('Section4.timeline.step2.description')}
+                title={t("Section4.timeline.step2.title")}
+                description={t("Section4.timeline.step2.description")}
               />
 
               <TimelineItem
                 number={3}
-                title={t('Section4.timeline.step3.title')}
-                description={t('Section4.timeline.step3.description')}
+                title={t("Section4.timeline.step3.title")}
+                description={t("Section4.timeline.step3.description")}
               />
 
               <TimelineItem
                 number={4}
-                title={t('Section4.timeline.step4.title')}
-                description={t('Section4.timeline.step4.description')}
+                title={t("Section4.timeline.step4.title")}
+                description={t("Section4.timeline.step4.description")}
               />
 
               <TimelineItem
                 number={5}
-                title={t('Section4.timeline.step5.title')}
-                description={t('Section4.timeline.step5.description')}
+                title={t("Section4.timeline.step5.title")}
+                description={t("Section4.timeline.step5.description")}
                 isLast={true}
               />
             </div>
@@ -339,46 +336,8 @@ export default async function AboutPage({
         </Container>
       </section>
 
-      <OurCommitment />
-      <section className="relative py-12">
-        <GridBackground />
-        <Container className="relative z-10">
-          <div className="relative px-6 pt-5 rounded-3xl  shadow-xl">
-            <Image
-              src="/bg-hero.jpg"
-              alt="hero bg"
-              fill
-              className="object-cover size-full rounded-3xl -z-10"
-            />
-
-            <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="flex flex-col gap-6 text-center  md:max-w-1/2">
-                <h2 className="text-h2">
-                  {t("Section6.heading")}
-                </h2>
-                <p className="text-paragraph">
-                {t("Section6.p1")}
-                </p>
-                <PrimaryButton
-                  className="w-fit self-center whitespace-nowrap"
-                  href="/contact"
-                >
-                 {t("Section6.cta")}
-                </PrimaryButton>
-              </div>
-              <div className="relative">
-                <Image
-                  src="/avatar-cta.png"
-                  alt="bussinessman avatar "
-                  width={500}
-                  height={500}
-                />
-                <CtaBubbles />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      
+      <CTASection locale={locale} />
     </>
   );
 }

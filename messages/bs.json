@@ -21,8 +21,142 @@
     "ogDescriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima."
   },
   "HomePage": {
-    "title": "Vozdra svite!",
-    "about": "Bs page"
+    "HeroSection": {
+      "badge": "Beta lansiranje",
+      "heading-part1": "Zanima vas kako riješiti nedostatak radne snage u BiH? ",
+      "heading-part2":"Pomozite nam izgraditi rješenje.",
+      "subhead": "Testiramo prototip potpuno usklađene platforme za strane radnike za poslodavce u BiH. Prijavite se da oblikujete funkcije, date povratne informacije i dobijete rani pristup.",
+      "cards": {
+        "pilotProgram": {
+          "title": "Pilot Program",
+          "description": "Doprinesite razvoju od samog početka"
+        },
+        "globalNetwork": {
+          "title": "Globalna mreža",
+          "description": "Partnerske agencije u PH, NP i IN"
+        },
+        "complianceFirst": {
+          "title": "Prvo usklađivanje",
+          "description": "Izgrađeno prema propisima o radu u BiH"
+        }
+      },
+      "bullets": {
+        "sourcing": "Izvori pre-provjerenih kandidata",
+        "workflow": "Cjeloviti pravno-usklađeni tijek rada",
+        "support": "Podrška pri uvođenju"
+      },
+      "cta": "Pridružite se listi ranog pristupa",
+      "infoText": "Tražimo osnivačke partnere i beta testere",
+      "infoAction": "Postanite osnivački partner",
+      "testimonial": {
+        "text": "“Veselim se vidjeti kako se ovo razvija!”",
+        "by": "— Budući Beta Korisnik"
+      },
+      "stats": {
+        "count": "11+",
+        "label": "prijava za beta dosad"
+      }
+    },
+    "NegativeTrends": {
+      "badge": "Negativni Trendovi",
+      "heading": "Izazov radne snage u BiH",
+      "subheading": "Naše firme se suočavaju s neviđenim nedostatkom kadrova koji prijeti rastu",
+      "cards": {
+        "shortages": "posto bosanskih preduzeća prijavljuje kritične nedostatke radne snage",
+        "economicImpact": "procijenjeni ekonomski gubici zbog nepopunjenih pozicija",
+        "foreignTalent": "porast broja firmi koje traže rješenja kroz strane radnike",
+        "timeToFill": "mjeseci prosječno za popunjavanje specijaliziranih pozicija"
+      },
+      "source": "Izvor: Bosanski ekonomski institut, 2024"
+    },
+    "PainPointsSection": {
+      "badge": "Stvarni utjecaj",
+      "heading": "Stvarni utjecaj u praksi",
+      "subheading": "Poslodavci širom BiH dijele ove izazove. Jeste li i vi među njima?",
+      "readMore": "Pročitajte više",
+      "cards": {
+        "technology": {
+          "industry": "Tehnologija",
+          "companySize": "Srednje (50-250)",
+          "category": "Nedostatak talenata",
+          "quote": "Morali smo odbiti tri velika ugovora ove godine zbog nedostatka kadrova u IT odjelu.",
+          "fullQuote": "Morali smo odbiti tri velika ugovora ove godine zbog nedostatka kadrova u IT odjelu. Unatoč konkurentnim plaćama, jednostavno ne možemo pronaći dovoljno kvalificiranih developera sa specijaliziranim vještinama koje nam trebaju. To je izravno utjecalo na našu stazu rasta i sposobnost da učinkovito služimo postojeće klijente."
+        },
+        "manufacturing": {
+          "industry": "Proizvodnja",
+          "companySize": "Veliko (250+)",
+          "category": "Regulatorne barijere",
+          "quote": "Dugotrajan proces izdavanja radnih dozvola koštao nas je nekoliko kvalificiranih kandidata koji nisu mogli čekati više od 6 mjeseci.",
+          "fullQuote": "Dugotrajan proces izdavanja radnih dozvola koštao nas je nekoliko kvalificiranih kandidata koji nisu mogli čekati više od 6 mjeseci da počnu raditi. Identificirali smo idealne kandidate za naše proizvodne pozicije iz susjednih zemalja, ali birokratske prepreke bile su nepremostive. Do trenutka kad smo napola prošli proces, kandidati su prihvatili ponude drugdje."
+        },
+        "hospitality": {
+          "industry": "Ugostiteljstvo",
+          "companySize": "Malo (10-50)",
+          "category": "Utjecaj na usluge",
+          "quote": "Naš restoran radi nedovoljno zaposlen više od godinu dana. Kao rezultat, skratili smo radno vrijeme i pojednostavili jelovnik.",
+          "fullQuote": "Naš restoran radi nedovoljno zaposlen više od godinu dana. Kao rezultat, skratili smo radno vrijeme i pojednostavili jelovnik. Ugostiteljska industrija u BiH se bori privući i zadržati radnike, posebno za kuhinjske pozicije. Pokušavali smo s programima obuke i višim plaćama, ali lokalna radna snaga je jednostavno premalena za rastući turistički sektor."
+        },
+        "healthcare": {
+          "industry": "Zdravstvo",
+          "companySize": "Srednje (50-250)",
+          "category": "Troškovi regrutacije",
+          "quote": "Potrošili smo više od €30,000 na agencije za regrutaciju ove godine uz minimalan uspjeh u pronalasku specijaliziranog medicinskog osoblja.",
+          "fullQuote": "Potrošili smo više od €30,000 na agencije za regrutaciju ove godine uz minimalan uspjeh u pronalasku specijaliziranog medicinskog osoblja. Odljev mozgova u zdravstvu je stvaran – naši najbolji stručnjaci odlaze u Zapadnu Europu, a mi se borimo da ih zamijenimo. Trebamo održiviji pristup popunjavanju kadra u klinikama koji se ne oslanja na skupe i neučinkovite metode regrutacije."
+        },
+        "retail": {
+          "industry": "Maloprodaja",
+          "companySize": "Srednje (50-250)",
+          "category": "Ograničenja rasta",
+          "quote": "Naši planovi širenja su neodređeno obustavljeni dok ne riješimo kritične izazove s kadrovima.",
+          "fullQuote": "Naši planovi širenja su neodređeno obustavljeni dok ne riješimo kritične izazove s kadrovima. Osigurali smo financiranje i identificirali lokacije za tri nove maloprodajne jedinice, ali bez povjerenja u sposobnost adekvatnog kadroviranja tih trgovina, ne možemo krenuti naprijed. Ovo usko grlo u zapošljavanju najveća je prepreka rastu naše kompanije u BiH."
+        },
+        "construction": {
+          "industry": "Građevinarstvo",
+          "companySize": "Veliko (250+)",
+          "category": "Jaz vještina",
+          "quote": "Razlika između vještina potrebnih za naše projekte i onih koje lokalni diplomci posjeduju svake godine postaje sve veća.",
+          "fullQuote": "Razlika između vještina potrebnih za naše projekte i onih koje lokalni diplomci posjeduju svake godine postaje sve veća. Prvih 6–12 mjeseci provodimo na obuci novih zaposlenika na osnovnim vještinama koje bi trebali savladati tijekom obrazovanja. To stvara kašnjenja u projektima i značajno povećava naše operativne troškove. Trebamo pristup talentu koji je spreman doprinijeti od prvog dana."
+        }
+      }
+    },
+    "PilotGoalsSection": {
+      "badge": "Naši Prvi Pilot Ciljevi",
+      "heading": "Naši Prvi Pilot Ciljevi",
+      "subheading": "Na čemu trenutno radimo dok gradimo i validiramo našu platformu.",
+      "cards": {
+        "agencyNetworkBuilding": {
+          "title": "Izgradnja Mreže Agencija",
+          "description": "Uspostavite snažne partnerstva u PH, NP i IN za pristup provjerenim kandidatima.",
+          "benefits": [
+            "Identificirati top 5 partnera po zemlji",
+            "Uspostaviti MoU i okvir SLA",
+            "Postaviti kanale komunikacije i razmjene podataka"
+          ],
+          "status": "Aktivno"
+        },
+        "employerInterestValidation": {
+          "title": "Validacija Interesa ",
+          "description": "Angažirajte bosanske firme kako biste izmjerili potražnju i prikupili povratne informacije.",
+          "benefits": [
+            "Održati 20 intervju poziva s ciljanim industrijama",
+            "Bilježiti spremnost na plaćanje i zahtjeve za funkcijama",
+            "Prioritizirati sektore prema hitnosti i obujmu"
+          ],
+          "status": "Otvoreno za beta"
+        },
+        "processPrototyping": {
+          "title": "Prototipiranje i Iteracija ",
+          "description": "Izraditi i usavršavati tijek od dozvole do onboardinga na temelju uvida iz pilota.",
+          "benefits": [
+            "Mapirati 5-koračni tijek zapošljavanja od početka do kraja",
+            "Automatizirati predloške dokumenata i podsjetnike",
+            "Iterirati prema povratnim informacijama poslodavaca i agencija"
+          ],
+          "status": "U planiranju"
+        }
+      },
+      "cta": "Više o procesu"
+    }
   },
   "AboutPage": {
     "PageIntro": {

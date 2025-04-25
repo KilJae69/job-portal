@@ -22,9 +22,145 @@
     "ogDescriptionContact": "Contact Spark Studio to discuss your project needs."
   },
   "HomePage": {
-    "title": "Hello world!",
-    "about": "En page"
-  },
+    "HeroSection": {
+      "badge": "Beta launch",
+      "heading-part1": "Curious About Solving Bosnia’s Labor Shortage? ",
+      "heading-part2":"Help Us Build the Solution.",
+      "subhead": "We’re prototyping a fully compliant foreign-staffing platform for BiH employers. Sign up to shape features, give feedback, and get early access.",
+      "cards": {
+        "pilotProgram": {
+          "title": "Pilot Program",
+          "description": "Influence our roadmap from day one"
+        },
+        "globalNetwork": {
+          "title": "Global Network",
+          "description": "Agency partners in PH, NP & IN"
+        },
+        "complianceFirst": {
+          "title": "Compliance First",
+          "description": "Built around BiH labor regulations"
+        }
+      },
+      "bullets": {
+        "sourcing": "Pre-vetted candidate sourcing",
+        "workflow": "End-to-end legal workflow",
+        "support": "Dedicated onboarding support"
+      },
+      "cta": "Join Our Early Access List",
+      "infoText": "Seeking founding partners & beta testers",
+      "infoAction": "Be a founding partner",
+      "testimonial": {
+        "text": "“Looking forward to seeing how this evolves!”",
+        "by": "— Future Beta User"
+      },
+      "stats": {
+        "count": "11+",
+        "label": "beta sign-ups so far"
+      }
+    },
+    "NegativeTrends": {
+      "badge": "Negative Trends",
+      "heading": "Bosnia's Workforce Challenge",
+      "subheading": "Our businesses face unprecedented staffing shortages that threaten growth",
+      "cards": {
+        "shortages": "of Bosnian businesses report critical staffing shortages",
+        "economicImpact": "estimated economic impact from unfilled positions",
+        "foreignTalent": "increase in businesses seeking foreign talent solutions",
+        "timeToFill": "months average time to fill specialized positions"
+      },
+      "source": "Source: Bosnia Economic Institute, 2024"
+    },
+    "PainPointsSection": {
+      "badge": "Real Impact",
+      "heading": "The Real-World Impact",
+      "subheading": "Employers across Bosnia share these common challenges. Are you among them?",
+      "readMore": "Read more",
+      "cards": {
+        "technology": {
+          "industry": "Technology",
+          "companySize": "Medium (50-250)",
+          "category": "Talent Shortage",
+          "quote": "We've had to turn down three major contracts this year due to staffing shortages in our IT department.",
+          "fullQuote": "We've had to turn down three major contracts this year due to staffing shortages in our IT department. Despite offering competitive salaries, we simply can't find enough qualified developers with the specialized skills we need. This has directly impacted our growth trajectory and our ability to serve our existing clients effectively."
+        },
+        "manufacturing": {
+          "industry": "Manufacturing",
+          "companySize": "Large (250+)",
+          "category": "Regulatory Barriers",
+          "quote": "The lengthy work permit process has cost us several qualified candidates who couldn't wait 6+ months to start.",
+          "fullQuote": "The lengthy work permit process has cost us several qualified candidates who couldn't wait 6+ months to start. We identified perfect matches for our manufacturing roles from neighboring countries, but the bureaucratic hurdles were insurmountable. By the time we navigated halfway through the process, the candidates had accepted positions elsewhere."
+        },
+        "hospitality": {
+          "industry": "Hospitality",
+          "companySize": "Small (10-50)",
+          "category": "Service Impact",
+          "quote": "Our restaurant has operated understaffed for over a year. We've reduced hours and simplified our menu as a result.",
+          "fullQuote": "Our restaurant has operated understaffed for over a year. We've reduced hours and simplified our menu as a result. The hospitality industry in Bosnia is struggling to attract and retain talent, especially for kitchen positions. We've tried training programs and higher wages, but the local talent pool is simply too small for the growing tourism sector."
+        },
+        "healthcare": {
+          "industry": "Healthcare",
+          "companySize": "Medium (50-250)",
+          "category": "Recruitment Costs",
+          "quote": "We've spent over €30,000 on recruitment agencies this year with minimal success finding specialized medical staff.",
+          "fullQuote": "We've spent over €30,000 on recruitment agencies this year with minimal success finding specialized medical staff. The healthcare brain drain is real - our best professionals leave for Western Europe, and we struggle to replace them. We need a more sustainable approach to staffing our clinics that doesn't rely on expensive and ineffective recruitment methods."
+        },
+        "retail": {
+          "industry": "Retail",
+          "companySize": "Medium (50-250)",
+          "category": "Growth Limitations",
+          "quote": "Our expansion plans are on hold indefinitely until we can solve our critical staffing challenges.",
+          "fullQuote": "Our expansion plans are on hold indefinitely until we can solve our critical staffing challenges. We've secured funding and identified locations for three new retail outlets, but without confidence in our ability to staff these stores properly, we cannot move forward. This staffing bottleneck is the single biggest obstacle to our company's growth in Bosnia."
+        },
+        "construction": {
+          "industry": "Construction",
+          "companySize": "Large (250+)",
+          "category": "Skills Gap",
+          "quote": "The skills gap between what our projects require and what local graduates offer is widening each year.",
+          "fullQuote": "The skills gap between what our projects require and what local graduates offer is widening each year. We're spending the first 6-12 months training new hires on basic skills they should have learned during their education. This creates project delays and increases our operational costs significantly. We need access to talent that's ready to contribute from day one."
+        }
+      }
+    },
+    
+    "PilotGoalsSection": {
+      "badge": "Our First Pilot Goals",
+      "heading": "Our First Pilot Goals",
+      "subheading": "What we’re focusing on right now as we build and validate our platform.",
+      "cards": {
+        "agencyNetworkBuilding": {
+          "title": "Agency Network Building",
+          "description": "Forge strong partnerships in PH, NP & IN to secure vetted candidates.",
+          "benefits": [
+            "Identify top 5 recruitment partners per country",
+            "Set up MoUs & SLA frameworks",
+            "Establish communication & data-sharing channels"
+          ],
+          "status": "Active"
+        },
+        "employerInterestValidation": {
+          "title": "Employer Interest Validation",
+          "description": "Engage BiH businesses to gauge demand and collect real-time feedback.",
+          "benefits": [
+            "Run 20 discovery calls with target industries",
+            "Capture willingness-to-pay & feature requests",
+            "Prioritize sectors by urgency & volume"
+          ],
+          "status": "Open for Beta"
+        },
+        "processPrototyping": {
+          "title": "Process Prototyping & Iteration",
+          "description": "Build & refine our permit-to-onboard workflow based on pilot learnings.",
+          "benefits": [
+            "Map the 5-step hiring flow end-to-end",
+            "Automate document templates & reminders",
+            "Iterate with employer & agency feedback loops"
+          ],
+          "status": "In Planning"
+        }
+      },
+      "cta": "Read more about process"
+    }
+  }
+  ,
   "AboutPage": {
     "PageIntro": {
       "title": "About Us"

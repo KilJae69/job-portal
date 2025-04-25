@@ -16,10 +16,7 @@ export function MovingBorderBadge({
     <Button
       as={"div"}
       borderRadius="1.75rem"
-      className={cn(
-        "bg-blue-100 flex items-center justify-center text-accent py-2 px-4 text-xl font-semibold  border-neutral-200 ",
-        className
-      )}
+      className={cn("bg-blue-100 flex items-center justify-center text-accent py-2 px-4 text-xl font-semibold  border-neutral-200 ",className)}
     >
       {icon} {text}
     </Button>

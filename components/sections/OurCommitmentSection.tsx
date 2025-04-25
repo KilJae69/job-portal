@@ -19,6 +19,9 @@ import Image from "next/image";
 import PrimaryButton from "../shared/PrimaryButton";
 import { useTranslations } from "next-intl";
 
+
+
+
 const DynamicLottieComponent = dynamic(
   () => import("@/components/shared/LottieComponent"),
   {
@@ -74,6 +77,7 @@ export default function OurCommitment() {
 
   return (
     <section ref={ref} className="w-full relative py-12 md:py-24">
+     
       <Container className="relative z-20">
         {/* Hero Section */}
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">

@@ -6,13 +6,18 @@ import { m } from "framer-motion";
 import { CircleCheck, Clock, Globe, HandshakeIcon } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Container } from "../shared/Container";
+import { FadeIn, FadeInStagger } from "../shared/FadeIn";
+import { MovingBorderBadge } from "../MovingBorderBadge";
+import PrimaryButton from "../shared/PrimaryButton";
 
-import { Container } from "./shared/Container";
-import PrimaryButton from "./shared/PrimaryButton";
-import { MovingBorderBadge } from "./MovingBorderBadge";
-import { FadeIn, FadeInStagger } from "./shared/FadeIn";
+import { useTranslations } from "next-intl";
+
+
 
 export default function HomeHeroCTASection() {
+
+  const t = useTranslations("HomePage")
   return (
     <section className="w-full relative pt-24 sm:pt-36 pb-12 bg-gradient-to-br from-slate-50 to-slate-100">
       <Container>
@@ -21,7 +26,7 @@ export default function HomeHeroCTASection() {
             {/* Beta badge */}
             <FadeIn>
               <MovingBorderBadge
-                text="Beta launch"
+                text={t("HeroSection.badge")}
                 icon={<Clock className="mr-1 h-4 w-4" />}
               />
             </FadeIn>
@@ -32,15 +37,13 @@ export default function HomeHeroCTASection() {
 
             {/* Headline */}
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
-              Curious About Solving Bosnia’s Labor Shortage?{" "}
-              <span className="text-blue-600">Help Us Build the Solution.</span>
+            {t("HeroSection.heading-part1")}{" "}
+              <span className="text-blue-600">{t("HeroSection.heading-part2")}</span>
             </h2>
 
             {/* Subhead */}
             <p className="text-paragraph">
-              We’re prototyping a fully compliant foreign-staffing platform for
-              BiH employers. Sign up to shape features, give feedback, and get
-              early access.
+            {t("HeroSection.subhead")}
             </p>
 
             {/* Feature Cards */}
@@ -50,9 +53,9 @@ export default function HomeHeroCTASection() {
                   <Card className="bg-white/50 border-0 shadow-sm">
                     <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                       <Clock className="h-8 w-8 text-blue-600 mb-2" />
-                      <h3 className="font-bold">Pilot Program</h3>
+                      <h3 className="font-bold">{t("HeroSection.cards.pilotProgram.title")}</h3>
                       <p className="text-sm text-muted-foreground">
-                        Influence our roadmap from day one
+                      {t("HeroSection.cards.pilotProgram.description")}
                       </p>
                     </CardContent>
                   </Card>
@@ -62,9 +65,9 @@ export default function HomeHeroCTASection() {
                   <Card className="bg-white/50 border-0 shadow-sm">
                     <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                       <Globe className="h-8 w-8 text-blue-600 mb-2" />
-                      <h3 className="font-bold">Global Network</h3>
+                      <h3 className="font-bold">{t("HeroSection.cards.globalNetwork.title")}</h3>
                       <p className="text-sm text-muted-foreground">
-                        Agency partners in PH, NP & IN
+                      {t("HeroSection.cards.globalNetwork.description")}
                       </p>
                     </CardContent>
                   </Card>
@@ -74,9 +77,9 @@ export default function HomeHeroCTASection() {
                   <Card className="bg-white/50 border-0 shadow-sm">
                     <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                       <HandshakeIcon className="h-8 w-8 text-blue-600 mb-2" />
-                      <h3 className="font-bold">Compliance First</h3>
+                      <h3 className="font-bold">{t("HeroSection.cards.complianceFirst.title")}</h3>
                       <p className="text-sm text-muted-foreground">
-                        Built around BiH labor regulations
+                      {t("HeroSection.cards.complianceFirst.description")}
                       </p>
                     </CardContent>
                   </Card>
@@ -87,15 +90,15 @@ export default function HomeHeroCTASection() {
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <CircleCheck className="mr-2 h-5 w-5 text-green-600 mt-0.5" />
-                  <span>Pre-vetted candidate sourcing</span>
+                  <span> {t("HeroSection.bullets.sourcing")}</span>
                 </li>
                 <li className="flex items-start">
                   <CircleCheck className="mr-2 h-5 w-5 text-green-600 mt-0.5" />
-                  <span>End-to-end legal workflow</span>
+                  <span>{t("HeroSection.bullets.workflow")}</span>
                 </li>
                 <li className="flex items-start">
                   <CircleCheck className="mr-2 h-5 w-5 text-green-600 mt-0.5" />
-                  <span>Dedicated onboarding support</span>
+                  <span>{t("HeroSection.bullets.support")}</span>
                 </li>
               </ul>
             </div>
@@ -103,18 +106,18 @@ export default function HomeHeroCTASection() {
             {/* CTA + Dialog */}
             <FadeIn className="flex flex-col sm:flex-row gap-4">
               <PrimaryButton href="/contact">
-                Join Our Early Access List
+              {t("HeroSection.cta")}
               </PrimaryButton>
             </FadeIn>
 
             {/* Partner / pilot info */}
             <div className="pt-4 border-t">
               <p className="text-sm text-muted-foreground mb-3">
-                Seeking founding partners & beta testers
+              {t("HeroSection.infoText")}
               </p>
               <div className="flex flex-wrap gap-4 items-center opacity-70">
                 <div className="flex items-center bg-white px-3 py-1 rounded-full text-xs font-medium">
-                  Be a founding partner
+                {t("HeroSection.infoAction")}
                 </div>
               </div>
             </div>
@@ -122,7 +125,8 @@ export default function HomeHeroCTASection() {
 
           {/* Hero image + placeholders */}
           <div className="relative lg:order-last ">
-            <div className="relative overflow-hidden rounded-xl glow">
+            <div className="relative overflow-hidden rounded-xl shadow-xl">
+              
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-transparent mix-blend-overlay" />
               <Image
                 src="/avatar-hero.png?height=800&width=600"
@@ -136,10 +140,10 @@ export default function HomeHeroCTASection() {
             {/* Optional testimonial placeholder */}
             <div className="absolute -bottom-6 -left-6 md:bottom-8 md:left-8 bg-white rounded-lg shadow-lg p-4 max-w-xs opacity-70">
               <p className="font-medium text-sm italic">
-                “Looking forward to seeing how this evolves!”
+              {t("HeroSection.testimonial.text")}
               </p>
               <p className="text-xs text-muted-foreground mt-1">
-                — Future Beta User
+              {t("HeroSection.testimonial.by")}
               </p>
             </div>
 
@@ -151,9 +155,9 @@ export default function HomeHeroCTASection() {
               transition={{ delay: 0.5 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">11+</div>
+                <div className="text-2xl font-bold text-blue-600">{t("HeroSection.stats.count")}</div>
                 <p className="text-xs text-muted-foreground">
-                  beta sign-ups so far
+                {t("HeroSection.stats.label")}
                 </p>
               </div>
             </m.div>
