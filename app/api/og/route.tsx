@@ -32,7 +32,7 @@ const description = hasDescription
       new URL("../../../public/spark-logo-img.png", import.meta.url)
     ).then((res) => res.arrayBuffer());
     const avatarData = await fetch(
-      new URL("../../../public/og-avatar-resized.png", import.meta.url)
+      new URL("../../../public/images/about-cooperation.png", import.meta.url)
     ).then((res) => res.arrayBuffer());
 
     // Convert ArrayBuffer to base64
@@ -52,20 +52,20 @@ const description = hasDescription
 
             {/* <img src={logoUrl} alt="spark logo" width={300} height={120} /> */}
             {pill && (
-              <div tw="bg-slate-800 text-[#d4af37] text-xl rounded-2xl py-3 px-6">
+              <div tw="bg-slate-800 text-[#2196f3] text-xl rounded-2xl py-3 px-6">
                 {pill}
               </div>
             )}
             <h2
               style={{ fontFamily: "Poppins" }}
-              tw="flex flex-col text-3xl sm:text-4xl font-bold py-8 tracking-wide text-center text-[#d4af37] justify-center items-center"
+              tw="flex flex-col text-3xl sm:text-4xl font-bold py-8 tracking-wide text-center text-[#2196f3] justify-center items-center"
             >
               <span tw="mb-6">{title}</span>
               <span tw="text-slate-800">{description}</span>
             </h2>
            
           </div>
-          <div tw="w-[30%] flex flex-col pt-8 items-center justify-between h-full bg-slate-800">
+          <div tw="w-[30%] flex flex-col pt-8 items-center justify-between h-full bg-blue-100">
             <img
               src={logoUrl}
               alt="spark logo"
