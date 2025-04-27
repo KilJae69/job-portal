@@ -39,7 +39,7 @@ export async function generateMetadata({
   )}&description=${encodeURIComponent(
     t("ogDescriptionHome")
   )}&locale=${locale}`;
-
+console.log(ogImageUrl);
   return {
     title: t("titleHome"),
     description: t("descriptionHome"),

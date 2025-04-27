@@ -20,6 +20,12 @@
     "descriptionContact": "Obratite se Superio pilot timu kako biste saznali kako se možete pridružiti našem prototipu zapošljavanja stranih radnika, podijeliti povratne informacije ili postati osnivački partner. Zajedno ćemo riješiti nedostatak radne snage u BiH.",
     "ogDescriptionContact": "Kontaktirajte Superio pilot tim za prijavu, pitanja ili partnerstvo u izradi usklađenog rješenja za zapošljavanje stranih radnika u BiH."
   },
+  "NotFound": {
+    "title": "404",
+    "header": "Stranica nije pronađena",
+    "description": "Nažalost, nismo mogli pronaći stranicu koju tražite.",
+    "homeLink": "Povratak na početnu stranicu"
+  },
   "HomePage": {
     "HeroSection": {
       "badge": "Beta lansiranje",

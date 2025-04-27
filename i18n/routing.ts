@@ -14,31 +14,31 @@ export const routing = defineRouting({
     "/": "/",
     "/about": { en: "/about", bs: "/o-nama", de: "/uber-uns" }, // Updated "ueber-uns" to "uber-uns"
     "/contact": { en: "/contact", bs: "/kontakt", de: "/kontakt" },
-    "/pricing": { en: "/pricing", bs: "/cijene", de: "/preise" },
+    // "/pricing": { en: "/pricing", bs: "/cijene", de: "/preise" },
     "/terms": { en: "/terms", bs: "/uslovi", de: "/nutzungsbedingungen" },
     "/privacy": {
       en: "/privacy",
       bs: "/politika-privatnosti",
       de: "/datenschutz",
     },
-    "/faq": { en: "/faq", bs: "/faq", de: "/faq" },
+    // "/faq": { en: "/faq", bs: "/faq", de: "/faq" },
 
     // Job-related pages
-    "/jobs": { en: "/jobs", bs: "/poslovi", de: "/stellenangebote" },
-    "/candidates": { en: "/candidates", bs: "/kandidati", de: "/kandidaten" },
-    "/employers": { en: "/employers", bs: "/poslodavci", de: "/arbeitgeber" },
-    "/bookmarks": { en: "/bookmarks", bs: "/zabiljeske", de: "/lesezeichen" },
-    "/dashboard": { en: "/dashboard", bs: "/kontrolna-ploca", de: "/dashboard" },
-    "/submit-job": { en: "/submit-job", bs: "/objavi-posao", de: "/job-einreichen" },
+    // "/jobs": { en: "/jobs", bs: "/poslovi", de: "/stellenangebote" },
+    // "/candidates": { en: "/candidates", bs: "/kandidati", de: "/kandidaten" },
+    // "/employers": { en: "/employers", bs: "/poslodavci", de: "/arbeitgeber" },
+    // "/bookmarks": { en: "/bookmarks", bs: "/zabiljeske", de: "/lesezeichen" },
+    // "/dashboard": { en: "/dashboard", bs: "/kontrolna-ploca", de: "/dashboard" },
+    // "/submit-job": { en: "/submit-job", bs: "/objavi-posao", de: "/job-einreichen" },
 
-    // Dynamic job posting pages
-    "/jobs/[slug]": { en: "/jobs/[slug]", bs: "/poslovi/[slug]", de: "/stellenangebote/[slug]" },
+    // // Dynamic job posting pages
+    // "/jobs/[slug]": { en: "/jobs/[slug]", bs: "/poslovi/[slug]", de: "/stellenangebote/[slug]" },
 
-    // Dynamic employer pages
-    "/employers/[id]": { en: "/employers/[id]", bs: "/poslodavci/[id]", de: "/arbeitgeber/[id]" },
+    // // Dynamic employer pages
+    // "/employers/[id]": { en: "/employers/[id]", bs: "/poslodavci/[id]", de: "/arbeitgeber/[id]" },
 
-    // Dynamic candidate profile pages
-    "/candidates/[id]": { en: "/candidates/[id]", bs: "/kandidati/[id]", de: "/kandidaten/[id]" }
+    // // Dynamic candidate profile pages
+    // "/candidates/[id]": { en: "/candidates/[id]", bs: "/kandidati/[id]", de: "/kandidaten/[id]" }
   },
     
   },

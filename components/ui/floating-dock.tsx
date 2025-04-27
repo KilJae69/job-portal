@@ -73,12 +73,12 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
     };
   
     return (
-      <div className={cn("relative block", className)}>
+      <div className={cn("relative cursor-pointer block", className)}>
         <AnimatePresence>
           {open && (
             <m.div
               layoutId="nav"
-              className="absolute top-full mt-2 inset-x-0 flex flex-col gap-2" // Changed to top-full and mt-2
+              className="absolute top-full cursor-pointer mt-2 inset-x-0 flex flex-col gap-2" // Changed to top-full and mt-2
               initial={{ opacity: 0, y: -10 }} // Animation starts from top
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }} // Animation exits to top
@@ -97,7 +97,7 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
                 >
                   <button
                     onClick={() => handleLocaleChange(item.code)}
-                    className="h-10 w-10 rounded-full bg-gray-50 relative flex items-center justify-center"
+                    className="h-10 w-10 cursor-pointer rounded-full bg-gray-50 relative flex items-center justify-center"
                   >
                     <Image
                       src={item.flag}
