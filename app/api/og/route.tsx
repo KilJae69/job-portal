@@ -47,7 +47,7 @@ const description = hasDescription
     return new ImageResponse(
       (
         <div tw="flex flex relative w-full h-full items-center justify-center bg-white ">
-          <div tw="flex flex-col w-[70%] py-12 px-4 md:items-center justify-between p-8">
+          <div tw="flex flex-col w-[65%] py-12 px-4 md:items-center justify-between p-8">
             {/* Image with responsive styling */}
 
             {/* <img src={logoUrl} alt="spark logo" width={300} height={120} /> */}
@@ -65,7 +65,7 @@ const description = hasDescription
             </h2>
            
           </div>
-          <div tw="w-[30%] flex flex-col pt-8 items-center justify-between h-full bg-blue-100">
+          <div tw="w-[35%] flex flex-col pt-8 items-center justify-between h-full bg-blue-100">
             <img
               src={logoUrl}
               alt="spark logo"
@@ -73,7 +73,7 @@ const description = hasDescription
               width={300}
               height={120}
             />
-            <img src={avatarUrl} alt="avatar" width={300} height={400} />
+            <img src={avatarUrl} alt="avatar" width={400} height={400} />
           </div>
         </div>
       ),
