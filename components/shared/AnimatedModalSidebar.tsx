@@ -20,7 +20,7 @@ import {
 
 import { FaAngleRight, FaXmark } from "react-icons/fa6";
 import navLinks from "@/constants/navLinks";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 
 function NavigationLinks() {
   const { setOpen } = useModal();
@@ -49,7 +49,7 @@ function NavigationLinks() {
 function ModalHeader() {
   const { setOpen } = useModal();
   return (
-    <div className=" flex py-3 px-2 justify-between items-center bg-white ">
+    <div className=" flex py-2 px-2 justify-between items-center bg-white ">
       <Link
         href="/"
         onClick={() => setOpen(false)}
@@ -72,15 +72,15 @@ function ModalHeader() {
   );
 }
 
-function ModalFooter() {
+// function ModalFooter() {
  
 
-  return (
-    <div className="mt-auto">
-      <Button>Post Job</Button>
-    </div>
-  );
-}
+//   return (
+//     <div className="mt-auto">
+//       <Button>Post Job</Button>
+//     </div>
+//   );
+// }
 
 export default function AnimatedModalSidebar() {
 //  const t = useTranslations("Header");
@@ -98,7 +98,7 @@ export default function AnimatedModalSidebar() {
             </p>
             <FloatingDock />
           </div> */}
-          <ModalFooter />
+          {/* <ModalFooter /> */}
         </ModalContent>
       </ModalBody>
     </Modal>

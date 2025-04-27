@@ -8,6 +8,7 @@ import { Poppins } from "next/font/google";
 import "@/app/globals.css";
 
 import InnerLayout from "../../components/shared/InnerLayout";
+import { Toaster } from "react-hot-toast";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -49,6 +50,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
             <InnerLayout>{children}</InnerLayout>
           </LazyMotion>
         </NextIntlClientProvider>
+        <Toaster/>
       </body>
     </html>
   );

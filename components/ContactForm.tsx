@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+
 import type React from "react";
 
 import { useForm } from "react-hook-form";
@@ -11,37 +11,37 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { MovingBorderBadge } from "./MovingBorderBadge";
 import { FadeIn } from "./shared/FadeIn";
-import Image from "next/image";
+
 import { useTranslations } from "next-intl";
 import { contactFormSchema, TContactFormSchema } from "@/lib/contactSchema";
-
+import { sendEmailAction } from "@/lib/sendEmail.action";
+import toast from "react-hot-toast";
 
 
 // Props interface for reusability
 interface ContactFormProps {
-  onSubmitSuccess?: (data: TContactFormSchema) => void;
+  
   defaultValues?: Partial<TContactFormSchema>;
   className?: string;
   
 }
 
 export default function ContactForm({
-  onSubmitSuccess,
+  
   defaultValues,
   className,
   
 }: ContactFormProps) {
   const t = useTranslations("ContactForm");
  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+ 
 
   // Initialize React Hook Form with Zod resolver
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors,isSubmitting },
   } = useForm<TContactFormSchema>({
     resolver: zodResolver(contactFormSchema(t)),
     defaultValues: {
@@ -56,18 +56,17 @@ export default function ContactForm({
 
   // Form submission handler
   const onSubmit = async (data: TContactFormSchema) => {
-    setIsSubmitting(true);
     try {
-      // Call the custom submit handler if provided
-      if (onSubmitSuccess) {
-        await onSubmitSuccess(data);
+      const response = await sendEmailAction(data);
+
+      if (response.error) {
+        toast.error(`${t("errorMessage")}:${response.error}`);
+      } else {
+        toast.success(`${t("successMessage")}`);
+        reset();
       }
-      setSubmitSuccess(true);
-      reset(); // Reset form after successful submission
     } catch (error) {
-      console.error("Form submission error:", error);
-    } finally {
-      setIsSubmitting(false);
+      toast.error(`Unexpected error: ${error} `);
     }
   };
 
@@ -86,14 +85,7 @@ export default function ContactForm({
       {t("subheading")}
       </p>
 
-      {submitSuccess ? (
-        <div className="my-8 rounded-md bg-green-50 p-4 flex items-center">
-          <Image src="/animations/success.gif" alt="success" width={200} height={200}/>
-          <p className="text-green-800 ">
-            Thank you for your message! We&apos;ll be in touch soon.
-          </p>
-        </div>
-      ) : (
+      
         <FadeIn>
           <form
             className="my-8 bg-linear-to-b from-accent/20  to-white relative shadow-md p-4 rounded-md"
@@ -166,7 +158,7 @@ export default function ContactForm({
             </button>
           </form>
         </FadeIn>
-      )}
+      
     </div>
   );
 }
@@ -181,7 +173,7 @@ const BottomGradient = () => {
   );
 };
 
-const LabelInputContainer = ({
+export const LabelInputContainer = ({
   children,
   className,
 }: {
@@ -196,6 +188,6 @@ const LabelInputContainer = ({
 };
 
 // Error message component with fixed height to prevent layout shifts
-const ErrorMessage = ({ children }: { children: React.ReactNode }) => {
+export const ErrorMessage = ({ children }: { children: React.ReactNode }) => {
   return <div className="min-h-[20px] text-xs text-rose-500 ">{children}</div>;
 };

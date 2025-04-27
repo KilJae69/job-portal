@@ -24,7 +24,7 @@
     "HeroSection": {
       "badge": "Beta lansiranje",
       "heading-part1": "Zanima vas kako riješiti nedostatak radne snage u BiH? ",
-      "heading-part2":"Pomozite nam izgraditi rješenje.",
+      "heading-part2": "Pomozite nam izgraditi rješenje.",
       "subhead": "Testiramo prototip potpuno usklađene platforme za strane radnike za poslodavce u BiH. Prijavite se da oblikujete funkcije, date povratne informacije i dobijete rani pristup.",
       "cards": {
         "pilotProgram": {
@@ -297,12 +297,12 @@
     }
   },
   "ContactPage": {
-    "h1":"Kontakt",
-     "h3":"Kontaktirajte nas direktno:"
+    "h1": "Kontakt",
+    "h3": "Kontaktirajte nas direktno:"
   },
   "ContactForm": {
-    "badge":"Djeluj Odmah",
-    "heading":"Kontaktirajte Nas",
+    "badge": "Djeluj Odmah",
+    "heading": "Kontaktirajte Nas",
     "subheading": "Popunite formu ispod i javit ćemo Vam se u što skorijem roku.",
     "fields": {
       "firstName": {
@@ -368,9 +368,24 @@
     "language-option-de": "Njemački"
   },
   "Footer": {
+    "callUs": "Pozovite Nas",
+    "rights": "© 2025 Superio. Sva prava zadržana.",
+    "developedBy": "Web stranicu razvio i održava",
+    "NewsletterForm": {
+      "title": "Ostanite informisani o našem pilot-programu",
+      "paragraph": "Prijavite se na našu mailing listu i prvi saznajte o partnerstvima s agencijama, ključnim fazama pronalaska kandidata i lansiranju platforme dok razvijamo prvo potpuno usklađeno rješenje za zapošljavanje u BiH.",
+      "placeholder": "Email adresa",
+      "validation": {
+        "required": "Ovo polje je obavezno.",
+        "emailInvalid": "Neispravna email adresa.",
+        "emailMax": "Email mora biti kraći od 100 znakova."
+      },
+      "successMessage": "Uspješno ste se pretplatili na naš newsletter!",
+      "errorMessage": "Došlo je do greške. Molimo pokušajte ponovo kasnije."
+    },
     "for-candidates": { "title": "Za kandidate" },
     "for-employers": { "title": "Za poslodavce" },
-    "about-us": { "title": "O nama" },
+    "about-us": { "title": "Brzi linkovi" },
     "navigation": {
       "jobs": "Poslovi",
       "employers": "Poslodavci",

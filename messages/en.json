@@ -370,9 +370,26 @@
     "language-option-de": "German"
   },
   "Footer": {
+    "callUs":"Call Us",
+    "rights":"© 2025 Superio. All Right Reserved.",
+    "developedBy":"Website developed and maintained by",
+    "NewsletterForm": {
+      "title": "Stay Updated on Our Pilot Program",
+      "paragraph": "Join our mailing list to receive exclusive news on agency partnerships, candidate sourcing milestones, and platform launches as we prototype Bosnia’s compliance-first staffing solution.",
+      "placeholder": "Email address",
+      "validation": {
+      "required": "This field is required.",
+      
+      "emailInvalid": "Invalid email address.",
+      "emailMax": "Email must be less than 100 characters."
+      
+    },
+    "successMessage": "Your have succesfully subscribed to our newsletter!",
+    "errorMessage": "Something went wrong. Please try again later."
+    },
     "for-candidates": { "title": "For Candidates" },
     "for-employers": { "title": "For Employers" },
-    "about-us": { "title": "About Us" },
+    "about-us": { "title": "Quick Links" },
     "navigation": {
       "jobs": "Jobs",
       "employers": "Employers",

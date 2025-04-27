@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/shared/FadeIn";
 import PageIntro from "@/components/shared/PageIntro";
 import { GridBackground } from "@/components/ui/grid-background";
 import { Locale, locales } from "@/lib/locales";
+import { siteConfig } from "@/lib/siteConfig";
 import { Mail, Phone } from "lucide-react";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -64,18 +65,18 @@ function ContactMethods() {
   return (
     <div className="flex flex-wrap justify-between gap-4 mb-8">
       <a
-        href="mailto:hello@superio.com"
+        href={`mailto:${siteConfig.email}`}
         className="inline-flex items-center space-x-2 bg-blue-50 hover:bg-blue-100 transition rounded-full px-6 py-5 text-lg font-medium"
       >
         <Mail className="size-7 text-blue-600" />
-        <span>hello@superio.com</span>
+        <span>{siteConfig.email}</span>
       </a>
       <a
-        href="tel:+38761123456"
+        href={`tel:${siteConfig.phone}`}
         className="inline-flex items-center space-x-2 bg-green-50 hover:bg-green-100 transition rounded-full px-6 py-5 text-lg font-medium"
       >
         <Phone className="size-7 text-green-600" />
-        <span>+387 61 123 456</span>
+        <span>{siteConfig.phoneLabel}</span>
       </a>
     </div>
   );

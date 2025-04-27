@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 import { MdEmail } from "react-icons/md";
 import { FaPhoneVolume, FaViber, FaWhatsapp } from "react-icons/fa6";
+import { siteConfig } from "@/lib/siteConfig";
 
 // Define bubbles with positions and delays
 const contacts = [
@@ -15,7 +16,7 @@ const contacts = [
     text: "Viber",
     position: "top-40 left-0",
     delay: 0.2,
-    href:"viber://chat?number=+38763699111"
+    href:`viber://chat?number=${siteConfig.phone}`
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const contacts = [
     text: "WhatsApp",
     position: "top-5 right-0",
     delay: 0.4,
-    href:"https://wa.me/+38763699111"
+    href:`https://wa.me/${siteConfig.phone}`
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const contacts = [
     text: "Phone",
     position: "top-30 right-0",
     delay: 0.6,
-     href:"tel:+38763699111"
+     href:`tel:${siteConfig.phone}`
   },
   {
     id: 4,
@@ -39,7 +40,7 @@ const contacts = [
     text: "Email",
     position: "top-4 left-0",
     delay: 0.8,
-    href:"mailto:adi.toromanovic@outlook.com"
+    href:`mailto:${siteConfig.email}`
   },
 ];
 

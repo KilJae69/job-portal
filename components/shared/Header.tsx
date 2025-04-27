@@ -96,7 +96,7 @@ export default function Header() {
         <div
           className={`flex relative items-center justify-between p-3 transition-all duration-300 ${
             headerState === "top"
-              ? " top-0 px-8 border-none rounded-none"
+              ? " top-0 px-4 lg:px-8 border-none rounded-none"
               : "py-1 top-0  bg-white/90 shadow-lg backdrop-filter shadow-black/[0.3] backdrop-blur-xl  px-10"
           }`}
         >
