@@ -73,7 +73,7 @@ const description = hasDescription
               width={300}
               height={120}
             />
-            <img src={avatarUrl} alt="avatar" width={400} height={400} />
+            <img src={avatarUrl} alt="avatar" className="aspect-square" width={400} height={400} />
           </div>
         </div>
       ),
