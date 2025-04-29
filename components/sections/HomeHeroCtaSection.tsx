@@ -36,7 +36,7 @@ export default function HomeHeroCTASection() {
             </div> */}
 
             {/* Headline */}
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
+            <h2 className="text-h2 ">
             {t("HeroSection.heading-part1")}{" "}
               <span className="text-blue-600">{t("HeroSection.heading-part2")}</span>
             </h2>
