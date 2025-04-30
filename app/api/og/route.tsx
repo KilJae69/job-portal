@@ -29,7 +29,7 @@ const description = hasDescription
     ).then((res) => res.arrayBuffer());
 
     const logoData = await fetch(
-      new URL("../../../public/spark-logo-img.png", import.meta.url)
+      new URL("../../../public/logo.png", import.meta.url)
     ).then((res) => res.arrayBuffer());
     const avatarData = await fetch(
       new URL("../../../public/images/about-cooperation.png", import.meta.url)
