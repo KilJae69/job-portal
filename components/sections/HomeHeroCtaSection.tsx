@@ -49,8 +49,8 @@ export default function HomeHeroCTASection() {
             {/* Feature Cards */}
             <div className="space-y-4">
               <FadeInStagger className="grid gap-2 sm:grid-cols-3">
-                <FadeIn>
-                  <Card className="bg-white/50 border-0 shadow-sm">
+                <FadeIn className="sm:flex">
+                  <Card className="bg-white/50 border-0 shadow-sm ">
                     <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                       <Clock className="h-8 w-8 text-blue-600 mb-2" />
                       <h3 className="font-bold">{t("HeroSection.cards.pilotProgram.title")}</h3>
@@ -61,7 +61,7 @@ export default function HomeHeroCTASection() {
                   </Card>
                 </FadeIn>
 
-                <FadeIn>
+                <FadeIn className="sm:flex">
                   <Card className="bg-white/50 border-0 shadow-sm">
                     <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                       <Globe className="h-8 w-8 text-blue-600 mb-2" />
@@ -73,7 +73,7 @@ export default function HomeHeroCTASection() {
                   </Card>
                 </FadeIn>
 
-                <FadeIn>
+                <FadeIn className="sm:flex">
                   <Card className="bg-white/50 border-0 shadow-sm">
                     <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                       <HandshakeIcon className="h-8 w-8 text-blue-600 mb-2" />
