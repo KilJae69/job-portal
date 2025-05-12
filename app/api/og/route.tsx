@@ -21,8 +21,8 @@ const description = hasDescription
 
     
 
-    const hasPill = searchParams.has("pill");
-    const pill = hasPill && searchParams.get("pill");
+   // const hasPill = searchParams.has("pill");
+   // const pill = hasPill && searchParams.get("pill");
 
     const fontData = await fetch(
       new URL("../../../fonts/Poppins-SemiBold.ttf", import.meta.url)
@@ -47,25 +47,8 @@ const description = hasDescription
     return new ImageResponse(
       (
         <div tw="flex flex relative w-full h-full items-center justify-center bg-white ">
-          <div tw="flex flex-col w-[65%] py-12 px-4 md:items-center justify-between p-8">
-            {/* Image with responsive styling */}
-
-            {/* <img src={logoUrl} alt="spark logo" width={300} height={120} /> */}
-            {pill && (
-              <div tw="bg-slate-800 text-[#2196f3] text-xl rounded-2xl py-3 px-6">
-                {pill}
-              </div>
-            )}
-            <h2
-              style={{ fontFamily: "Poppins" }}
-              tw="flex flex-col text-3xl sm:text-4xl font-bold py-8 tracking-wide text-center text-[#2196f3] justify-center items-center"
-            >
-              <span tw="mb-6">{title}</span>
-              <span tw="text-slate-800">{description}</span>
-            </h2>
-           
-          </div>
-          <div tw="w-[35%] flex flex-col pt-8 items-center justify-between h-full bg-blue-100">
+          
+          <div tw="w-full flex flex-col pt-8 items-center justify-between h-full bg-blue-100">
             <img
               src={logoUrl}
               alt="spark logo"
