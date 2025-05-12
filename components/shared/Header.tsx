@@ -112,9 +112,9 @@ export default function Header() {
           >
             <Link href="/" aria-label="Home">
               <Image
-                src="/logo.png"
+                src="/talent-link-logo.svg"
                 priority
-                alt="Spark Studio Logo"
+                alt="Talent Link Logo"
                 className="object-contain"
                 fill
               />

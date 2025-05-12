@@ -17,14 +17,15 @@ export default function Footer() {
       <Container>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col justify-start gap-3">
-            <div className="relative self-start w-[160px] h-[50px]">
+            <div className="relative self-start ">
               <Link href="/" aria-label="Home">
                 <Image
-                  src="/logo.png"
-                  priority
-                  alt="Spark Studio Logo"
+                  src="/talent-link-logo.svg"
+
+                  alt="Talent Link Logo"
                   className="object-contain"
-                  fill
+                  width={160}
+                  height={70}
                 />
               </Link>
             </div>

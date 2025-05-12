@@ -3,8 +3,6 @@ import React from "react";
 
 import { Link } from "@/i18n/routing";
 
-
-
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -57,8 +55,8 @@ function ModalHeader() {
         className="relative w-[120px] h-[40px]"
       >
         <Image
-          src="/logo.png"
-          alt="Spark Studio Logo"
+          src="/talent-link-logo.svg"
+          alt="Talent Link Logo"
           className="object-contain"
           fill
         />
@@ -73,7 +71,6 @@ function ModalHeader() {
 }
 
 // function ModalFooter() {
- 
 
 //   return (
 //     <div className="mt-auto">
@@ -83,7 +80,7 @@ function ModalHeader() {
 // }
 
 export default function AnimatedModalSidebar() {
-//  const t = useTranslations("Header");
+  //  const t = useTranslations("Header");
   return (
     <Modal>
       <ModalTrigger />
