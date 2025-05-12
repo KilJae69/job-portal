@@ -53,7 +53,7 @@ const description = hasDescription
               src={logoUrl}
               alt="spark logo"
               tw="ml-8"
-              width={300}
+              width={320}
               height={120}
             />
             <img src={avatarUrl} alt="avatar" className="aspect-square" width={400} height={400} />
